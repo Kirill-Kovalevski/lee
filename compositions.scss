@@ -3,19 +3,35 @@
     box-sizing: border-box;
 }
 html {
-   
-    
-    margin-inline: auto;
     max-width: 1920px;
     max-height:1080px;
+    background-color: #F7F7F7;
     
 
 }
 body {
-    top:278px;
-    left:440px;
-    
-   background-color: #F7F7F7;
-    top:278px;
-   
+    background-color: rgb(247, 247, 247)
+}
+@font-face{
+    font-family: 'card-font-bd';
+    src: url('./fonts/segoeuithibd.ttf')
+}
+@font-face{
+    font-family: 'card-font-this';
+    src: url('./fonts/segoeuithis.ttf')
+}
+@font-face{
+    font-family: 'card-font-thisi';
+    src: url('./fonts/segoeuithisi.ttf')
+}
+@font-face{
+    font-family: 'card-font-z';
+    src: url('./fonts/segoeuithisz.ttf')
+}
+.upper-card-text{
+    font-family:'card-font-z', sans-serif;
+}
+.midend-card-text{
+    font-family: 'card-font-bd', sans-serif;
+
 }

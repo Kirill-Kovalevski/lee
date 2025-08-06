@@ -9,9 +9,9 @@
     <title>Front-End Assignment</title>
 </head>
 <body>
-    <div class="top-block">
-        <button class="go-back-button">th</button>
-        <h1>העדרויות</h1>
+    <div class="title-block">
+        <button class="go-back-button">></button>
+        <p class="title-absences">העדרויות</p>
     </div>
     <div class="search-block">
         <form role="search"action="/search" method="GET">
@@ -20,19 +20,27 @@
     </form>
         <button class="filter-button">סינון</button>
     </div>
-    <div class="report-container-block">
-        <div class="report-card clicked-report-card">
-            <p>לא הגיעו</p>
-            <p>4</p>
-            <p>ב-7 הימים האחרונים</p>
+<div class="report-container-block">
+        <div class="clicked-report-card card-block">
+            <p class="upper-card-text">לא הגיעו</p>
+            <p class="midend-card-text">4</p>
+            <p class="midend-card-text">ב-7 הימים האחרונים</p>
         </div>
-        <div class="report-card regular-report-card">
-            <p>מתוכם</p>
+        <div class="regular-report-card text-inside-cards card-block">
+            <p class="upper-card-text">מתוכם</p>
+            <p class="midend-card-text">2</p>
+            <p class="midend-card-text">לא נרשמו כלל</p>
+        </div>
+        <div class="regular-report-card text-inside-cards midend-card-text card-block">
+            <p class="upper-card-text">מתוכם</p>
             <p>2</p>
-            <p>לא נרשמו כלל</p>
+            <p>נרשמו ולא הגיעו</p>
         </div>
-        <div class="report-card"></div>
-        <div class="report-card"></div>
+        <div class="regular-report-card text-inside-cards midend-card-text card-block">
+            <p class="upper-card-text">מתוכם</p>
+            <p>2</p>
+            <p>ללא שיבוץ עתידי</p>
+        </div>
     </div>
     <div class="mid-title-block">
         <h2>כותרת</h2>

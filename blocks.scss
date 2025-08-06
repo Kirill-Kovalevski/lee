@@ -1,14 +1,12 @@
 // Components- reusable, isolated, and styled with purpose
-.top-block{
+.title-block{
     display: flex;
-    justify-content:left
-    max-width: 218.62px;
-    max-height: 56px;
-    top:88px;
-    left: 1361.38px;
-    border-radius:12px;
+    flex-wrap: wrap;
+    height:56px;
+    width:218.62px;
+    padding: 88px 0 
     
-    
+   
 }
 .search-block {
     top: 200px;
@@ -26,19 +24,37 @@
 .report-container-block{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    min-width: 1140px;
+    top:278px;
+    left:440px;
+    padding-bottom: 16px;
+    gap: 27px;
     
+}
 
-}
-.first-report-block{
-    height: ;
-}
 .clicked-report-card{
+    align-content: center;
+    height:196px;
+    width: 264.75px;
     background-color: rgb(50, 50, 76);
     border-radius: 20px;
-    max-width: 1140px;
-    max-height: 196px;
+   
+    
 }
 .regular-report-card{
+    align-content: center;
+    height:196px;
+    width: 264.75px;
     border-radius: 20px;
-    background-color:rgb(255, 255, 255) ;
+    background-color:rgb(255, 255, 255);
+}
+.text-inside-cards{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

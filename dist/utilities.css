@@ -13,4 +13,17 @@
 
 .go-back-button {
   border-radius: 12px;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  top: 88px;
+}
+
+.title-absences {
+  position: absolute;
+  top: 88px;
+  left: 440px;
+  font-family: "card-font-bd", sans-serif;
+  font-size: 24px;
+  color: #32324c;
 }
