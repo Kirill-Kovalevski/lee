@@ -1,0 +1,15 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #F7F7F7;
+  margin-inline: auto;
+  max-width: 1920px;
+  max-height: 1080px;
+}
+
+body {
+  background-color: aqua;
+  top: 278px;
+}
