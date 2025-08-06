@@ -26,7 +26,7 @@
 .report-container-block{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(255, 142, 5);
+    
 
 }
 .first-report-block{
@@ -35,4 +35,10 @@
 .clicked-report-card{
     background-color: rgb(50, 50, 76);
     border-radius: 20px;
+    max-width: 1140px;
+    max-height: 196px;
+}
+.regular-report-card{
+    border-radius: 20px;
+    background-color:rgb(255, 255, 255) ;
 }
