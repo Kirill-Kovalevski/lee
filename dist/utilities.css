@@ -38,9 +38,7 @@
 .icon-searchlight {
   width: 28px;
   height: 28px;
-  margin-right: 340px;
-  margin-left: 0px;
-  background-color: white;
+  color: #292929;
 }
 
 .sliders-light.icon {
@@ -52,10 +50,34 @@
 }
 
 .mid-title {
-  font-family: "card-font-bd", sans-serif;
+  display: block;
+  margin-right: 340px;
   font-weight: 400;
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0.95%;
   color: #292929;
+}
+
+.filter-text {
+  font-family: "card-font-bd", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #707070;
+  margin-left: 8px;
+}
+
+.filter-icon {
+  width: 28px;
+  height: 26.25px;
+  color: #000000;
+  background-color: #F7F7F7;
+}
+
+.up-arrow {
+  width: 8.99px;
+  height: 14px;
+  color: #959595;
 }

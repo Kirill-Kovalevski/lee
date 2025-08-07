@@ -13,17 +13,21 @@
         <button class="go-back-button"><img src="/icons/angle-double-left-light.png" alt="angle-double-left-light"></button>
         <p class="title-absences">העדרויות</p>
     </div>
-    <div class="search-block">
-        <img src="/icons/search-light.png" alt="search-light" class="icon-searchlight">
-        <form role="search"action="/search" method="GET" class="search-box">
-        <input type="search" name="s" placeholder="חיפוש לפי שם"  class="search-input" >
-    </form>
-        <div class="filter-block">
-        <img src="/icons/sliders-light (1).png" alt="sliders-light" class="sliders-light-icon">
-        <button class="filter-button">סינון</button>
-        <hr class="absences-horizontal-divider">
-        </div>
+
+    <div class="search-filter-block">
+        <form role="search"action="/search" method="GET" class="search-block">
+            <img src="/icons/search-light.png" alt="search-light" class="icon-searchlight">
+            <input type="search" name="s" placeholder="חיפוש לפי שם"  class="search-input" >
+        </form>
+        
+
+<div class="filter-block">
+    <img src="/icons/sliders-light (1).png" alt="sliders-light" class="filter-icon">
+    <p class="filter-text">סינון</p>
+</div>
+
     </div>
+    <hr class="absences-horizontal-divider">
     
 <div class="report-container-block">
         <div class="clicked-report-card card-block">
@@ -47,16 +51,41 @@
             <p>ללא שיבוץ עתידי</p>
         </div>
     </div>
-    <div class="mid-title-block">
-        <img src="/icons/page_table-title.png" alt="page-table-title" class="mid-title">
-    </div>
+    <img src="/icons/page_table-title.png" alt="page-table-title" class="mid-title">
     <div class="user-report-block">
-        <div class="first-row-block"><p>שם הלקוח חץ, ניראה לאחרונה חץ, שיבוץ עתידי חץ, מנוי חץ</p></div>
-        <div class="second-row-block"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
-        <div class="third-row-block"><p>Lorem ipsum dolor sit amet consectetur.</p></div>
-        <div class="fourth-row-block"><p>Lorem ipsum dolor sit.</p></div>
-        <div class="fifth-row-block"><p>Lorem ipsum dolor sit.</p></div>
-        <div class="sixth-row-block"></div>
+        
+        <div class="one-row-block">
+            <p class="one-row-client-name"><img src="/icons/page_table_header_filter_name-icon.png" alt="page_table_header_filter_name-icon" class="up-arrow">שם הלקוח</p>
+            <P class="one-row-last-seen"><img src="/icons/page_table_header_filter_name-icon.png" alt="page_table_header_filter_name-icon" class="up-arrow">נראה לאחרונה</P>
+            <P class="one-row-next-session"><img src="/icons/page_table_header_filter_name-icon.png" alt="page_table_header_filter_name-icon" class="up-arrow">שיבוץ עתידי</P>
+            <P class="one-row-sub"><img src="/icons/page_table_header_filter_name-icon.png" alt="page_table_header_filter_name-icon" class="up-arrow">מנוי</P>
+        </div>
+        
+        <div class="one-row-block">
+            <p class="second-row-client-name">ישראל ישראלוב</p>
+            <div class="second-row-last-seen-block">
+            <p class="second-row-last-seen">שם השיעור האחרון</p>
+            <p >23/06</p>
+            <P >12:30</P>
+            </div>
+            <P class="second-row-next-session">23/10</P>
+            <P class="second-row-sub">ללא מנוי</P>
+        </div>
+        <div class="one-row-block"> 
+            <p>ישראל ישראלוב</p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="one-row-block">
+            <p>ישראל ישראלוב</p>
+            <p></p>
+            <p></p>
+        </div>
+        <div class="one-row-block">
+            <p>ישראל ישראלוב</p>
+            <p></p>
+            <p></p>
+        </div>
 
     </div>
 

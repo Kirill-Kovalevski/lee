@@ -3,14 +3,17 @@
     box-sizing: border-box;
 }
 html {
-    max-width: 1920px;
-    max-height:1080px;
+    max-width: 1141px;
+    max-height:928px;
     background-color: #F7F7F7;
     
 
 }
 body {
-    background-color: rgb(247, 247, 247)
+    background-color: rgb(247, 247, 247);
+    border-radius: 12px solid tomato;
+    z-index: 10;
+    
 }
 @font-face{
     font-family: 'card-font-bd';
@@ -43,4 +46,75 @@ body {
     margin-right: 340px;;
     rotate: -0deg;
 
+}
+// .search-input{
+//     width: 100px;
+//     height: 21px;
+//     font-weight: 400;
+//     font-style: normal;
+//     font-size: 18px;
+//     line-height: 100%;
+//     letter-spacing: 0%;
+//     color: #707070;
+
+// }
+.user-report-block{
+    display: flex;
+}
+.one-row-client-name{
+    width: 277px;
+    height: 29px;
+    padding: 0 10px 0 0;
+    gap: 10px;
+    font-size: 20px;
+}
+.one-row-last-seen{
+    width: 377px;
+    height: 29px;
+    padding: 0 10px 0 0;
+    gap: 10px;
+    font-size: 20px;
+}
+.one-row-next-session{
+    width: 140px;
+    height: 29px;
+    padding: 0 10px 0 0;
+    gap: 10px;
+    font-size: 20px;
+
+}
+.one-row-sub{
+    width: 165px;
+    height: 29px;
+    padding: 0 10px 0 0;
+    gap: 10px;
+    font-size: 20px;
+
+}
+.second-row-client-name{
+    width:277px;
+    height: 29px;
+    padding: 0 10px 0 0;
+    gap: 10px;
+
+}
+.second-row-last-seen{
+    width: 140px;
+    height: 29px;
+    padding: 0 10px 0 0;
+    gap: 10px;
+
+}
+.second-row-sub{
+    width: 138px;
+    height: 29px;   
+    padding: 0 10px 0 0;
+    gap: 10px;
+}
+.second-row-last-seen-block{
+    display: flex;
+    width: 377px;
+    height: 29px;
+    padding: 0 10px 0 0;
+    gap: 10px;  
 }

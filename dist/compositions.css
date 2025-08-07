@@ -3,13 +3,15 @@
 }
 
 html {
-  max-width: 1920px;
-  max-height: 1080px;
+  max-width: 1141px;
+  max-height: 928px;
   background-color: #F7F7F7;
 }
 
 body {
   background-color: #f7f7f7;
+  border-radius: 12px solid tomato;
+  z-index: 10;
 }
 
 @font-face {
@@ -43,4 +45,69 @@ body {
   margin-left: 440px;
   margin-right: 340px;
   rotate: 0deg;
+}
+
+.user-report-block {
+  display: flex;
+}
+
+.one-row-client-name {
+  width: 277px;
+  height: 29px;
+  padding: 0 10px 0 0;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.one-row-last-seen {
+  width: 377px;
+  height: 29px;
+  padding: 0 10px 0 0;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.one-row-next-session {
+  width: 140px;
+  height: 29px;
+  padding: 0 10px 0 0;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.one-row-sub {
+  width: 165px;
+  height: 29px;
+  padding: 0 10px 0 0;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.second-row-client-name {
+  width: 277px;
+  height: 29px;
+  padding: 0 10px 0 0;
+  gap: 10px;
+}
+
+.second-row-last-seen {
+  width: 140px;
+  height: 29px;
+  padding: 0 10px 0 0;
+  gap: 10px;
+}
+
+.second-row-sub {
+  width: 138px;
+  height: 29px;
+  padding: 0 10px 0 0;
+  gap: 10px;
+}
+
+.second-row-last-seen-block {
+  display: flex;
+  width: 377px;
+  height: 29px;
+  padding: 0 10px 0 0;
+  gap: 10px;
 }
