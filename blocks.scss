@@ -1,12 +1,14 @@
 // Components- reusable, isolated, and styled with purpose
 .title-block{
+    margin-right:340px;
     display: flex;
     flex-wrap: wrap;
     height:56px;
     width:218.62px;
-    padding: 88px 0 
-    
-   
+    margin-left:440px;
+    margin-top:88px;
+    gap: 35.62px;
+
 }
 .search-block {
     top: 200px;
@@ -17,26 +19,28 @@
     border-radius: 16px;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    
     
 
 }
 .report-container-block{
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    min-width: 1140px;
-    top:278px;
-    left:440px;
+    width: 1140px;
+    margin-top:2px;
+    margin-left:440px;
+    margin-right:340px;
     padding-bottom: 16px;
-    gap: 27px;
+    gap: 26.7px;
     
 }
 
 .clicked-report-card{
+    margin: 0;
+    padding: 0;
     align-content: center;
-    height:196px;
-    width: 264.75px;
+    width: 265px;
+    height: 180px;
     background-color: rgb(50, 50, 76);
     border-radius: 20px;
    
@@ -44,10 +48,11 @@
 }
 .regular-report-card{
     align-content: center;
-    height:196px;
-    width: 264.75px;
+    width: 265px;
+    height: 180px;
     border-radius: 20px;
     background-color:rgb(255, 255, 255);
+
 }
 .text-inside-cards{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -57,4 +62,21 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 265px;
+    height: 180px;
+}
+.search-box{
+    margin-bottom: 0px;;
+    width: 280px;
+    height: 56px;
+}
+.mid-title-block{
+    margin-right: 340px;
+    margin-left: 440px;
+    
+}
+.user-report-block{
+    margin-right: 340px;
+    margin-left:440px;;
+    
 }

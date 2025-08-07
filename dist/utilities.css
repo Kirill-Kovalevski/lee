@@ -4,6 +4,7 @@
   top: 175px;
   left: 439px;
   border-radius: 12px;
+  margin-left: 439px;
 }
 
 .search-submit-button {
@@ -17,13 +18,20 @@
   height: 56px;
   border-radius: 12px;
   top: 88px;
+  right: 440px;
 }
 
 .title-absences {
-  position: absolute;
   top: 88px;
   left: 440px;
   font-family: "card-font-bd", sans-serif;
   font-size: 24px;
-  color: #32324c;
+}
+
+.icon-searchlight {
+  width: 28px;
+  height: 28px;
+  margin-right: 340px;
+  margin-left: 0px;
+  background-color: white;
 }

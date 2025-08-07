@@ -35,3 +35,12 @@ body {
 .midend-card-text {
   font-family: "card-font-bd", sans-serif;
 }
+
+.absences-horizontal-divider {
+  width: 1142px;
+  height: 0px;
+  background-color: #DDDDDD;
+  margin-left: 440px;
+  margin-right: 340px;
+  rotate: 0deg;
+}
