@@ -1,8 +1,11 @@
 .filter-button {
   width: 100px;
   height: 56px;
-  top: 175px;
-  left: 439px;
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  background-color: #F7F7F7;
   border-radius: 12px;
   margin-left: 439px;
 }
@@ -22,10 +25,14 @@
 }
 
 .title-absences {
-  top: 88px;
-  left: 440px;
+  width: 127px;
+  height: 38px;
   font-family: "card-font-bd", sans-serif;
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: regular;
+  line-height: 100%;
+  letter-spacing: 0.95%;
 }
 
 .icon-searchlight {
@@ -34,4 +41,21 @@
   margin-right: 340px;
   margin-left: 0px;
   background-color: white;
+}
+
+.sliders-light.icon {
+  width: 28px;
+  height: 26.25px;
+  margin-right: 340px;
+  margin-left: 0px;
+  background-color: #000000;
+}
+
+.mid-title {
+  font-family: "card-font-bd", sans-serif;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  color: #292929;
 }
