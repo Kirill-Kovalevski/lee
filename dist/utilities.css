@@ -83,3 +83,32 @@
   height: 14px;
   color: #959595;
 }
+
+@font-face {
+  font-family: "Rubik Light";
+  src: url("./fonts/Rubik/Rubik-VariableFont_wght.ttf");
+}
+.grid-font {
+  font-family: "Rubik Light, sans-serif";
+  font-weight: 400;
+  font-style: normal;
+  size: 20px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  -ms-text-combine-horizontal: right;
+  color: #959595;
+}
+
+.grid-font-underline {
+  font-family: "Rubik Light, sans-serif";
+  font-weight: 400;
+  font-style: normal;
+  size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  -ms-text-combine-horizontal: right;
+  color: #292929;
+  text-decoration: underline;
+  font-style: solid;
+  offset: 0%;
+}

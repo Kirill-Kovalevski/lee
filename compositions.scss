@@ -147,17 +147,17 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 1141px;
-    height: 29px;
+    height: 61px;
     border-radius: 12px;
     background-color: rgb(247, 247, 247);
 }
 .user-info-block-two{
     grid-area: 2/1/3/13;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     max-width: 1141px;
-    height: 29px;
+    height: 61px;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 1);
 }
@@ -166,7 +166,7 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 1141px;
-    height: 29px;
+    height: 61px;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 1);
 }
@@ -175,7 +175,7 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 1141px;
-    height: 29px;
+    height: 61px;
     border-radius: 12px;
     background-color:rgba(255, 255, 255, 1);
 }
@@ -184,7 +184,10 @@ body {
     display: flex;
     justify-content: space-between;
     max-width: 1141px;
-    height: 29px;
+    height: 61px;
     border-radius: 12px;
     background-color: rgba(255, 255, 255, 1);
+}
+.display-flex{
+    display: flex;
 }

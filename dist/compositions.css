@@ -143,7 +143,7 @@ body {
   justify-content: space-between;
   align-items: center;
   max-width: 1141px;
-  height: 29px;
+  height: 61px;
   border-radius: 12px;
   background-color: #f7f7f7;
 }
@@ -151,10 +151,10 @@ body {
 .user-info-block-two {
   grid-area: 2/1/3/13;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
   max-width: 1141px;
-  height: 29px;
+  height: 61px;
   border-radius: 12px;
   background-color: white;
 }
@@ -164,7 +164,7 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 1141px;
-  height: 29px;
+  height: 61px;
   border-radius: 12px;
   background-color: white;
 }
@@ -174,7 +174,7 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 1141px;
-  height: 29px;
+  height: 61px;
   border-radius: 12px;
   background-color: white;
 }
@@ -184,7 +184,11 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 1141px;
-  height: 29px;
+  height: 61px;
   border-radius: 12px;
   background-color: white;
+}
+
+.display-flex {
+  display: flex;
 }

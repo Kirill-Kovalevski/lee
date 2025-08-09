@@ -122,6 +122,7 @@
 
 .first-inner-block {
   grid-area: 1/1/3/13;
+  margin-right: 48px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -145,9 +146,8 @@
 }
 
 .third-inner-block {
-  margin-right: 10px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 140px;
   height: 29px;
@@ -170,7 +170,10 @@
 }
 
 .second-row-first-inner-block {
-  grid-area: 1/1/3/13;
+  display: flex;
+  align-items: center;
+  align-self: center;
+  margin-right: 48px;
   width: 277px;
   height: 29px;
   padding: 0 10px 0 0;
@@ -178,6 +181,7 @@
 }
 
 .second-row-second-inner-block {
+  display: flex;
   margin-right: 10px;
   width: 377px;
   height: 29px;
@@ -194,8 +198,11 @@
 }
 
 .second-row-fourth-inner-block {
-  margin-right: 10px;
-  width: 165px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
   height: 29px;
   padding: 0 10px 0 0;
   gap: 10px;
