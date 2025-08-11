@@ -8,3 +8,8 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.title-absences {
+  width: 127px;
+  height: 38px;
+}

@@ -3,16 +3,16 @@
     box-sizing: border-box;
 }
 html {
-    max-width: 1141px;
-    max-height:928px;
-    background-color: #c43030;
+    width: 1920px;
+    height: 1080px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(247, 247, 247, 1)
     
 
 }
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     max-width: 1141px;
     max-height:928px;
     background-color: rgba(247, 247, 247, 1)
@@ -23,9 +23,9 @@ body {
     width: 1141px;
     height: 928px ;
     display: grid;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    // justify-content: center;
+    // align-items: center;
+    // align-content: center;
 
 
 }
@@ -33,17 +33,24 @@ body {
     width: 1141px;
     height: 56px;
     display:flex;
+    align-items: center;
+    gap: 36px;;
+    
 
 }
 .flex-search-container{
     width: 1141px;
     height: 72px;
     display: flex;
+     justify-content: space-between;
+    align-items: center;
 }
 .flex-stats-container{
     width: 1141px;
     height: 196px;
     display: flex;
+     justify-content: space-between;
+    align-items: center;
 }
     
 // }
