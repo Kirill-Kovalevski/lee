@@ -7,28 +7,48 @@
     <link rel="stylesheet" href="dist/blocks.css">
     <link rel="stylesheet" href="dist/utilities.css">
     <link rel="stylesheet" href="/dist/exceptions.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+ 
     <title>Front-End Assignment</title>
 </head>
 <body>
     <div class="grid-container">
 
         <div class="flex-title-container">
-            <button class="go-back-button"><img src="/icons/angle-double-left-light.png" alt="angle-double-left-light"></button>
-            <p class="title-absences rubik-400-regular-32px">העדרויות</p>
-        </div>
+
+            <button class="go-back-button">
+                <img src="/icons/angle-double-left-light.png" alt="Double left arrow icon indicating back navigation, located at the top of the absences page, neutral tone">
+                    </button>
+                            <p class="title-absences rubik-400-regular-32px">היעדרויות</p>  
+                                </div>
         <div class="flex-search-container">
             <div class="search-box">
-                <form role="search" action="/search" method="GET" class="search-block">
-                    <img src="/icons/search-light.png" alt="search-light" class="icon-searchlight">
-                    <input type="search" name="s" placeholder="חיפוש לפי שם" class="search-input">
+                <form  class="search-input" role="search" action="/search" method="GET"  >
+                    <button  class="search-button">
+                   <img  src="/icons/search-light.png" alt="search-light" class="search-light-icon">
+                    <input type="search" name="s" placeholder="חיפוש לפי שם" class="search-input rubik-400-regular-18px">
+                     </button>
                 </form>
+
+            
             </div>
+            <div class="filter-box">
+                <img src="/icons/sliders-light (1).png" alt="sliders-light" class="filter-icon">
+                <p class="filter-text rubik-400-regular-18px">סינון</p>
+            </div>
+            
         </div>
+        <hr class="horizontal-line">
         <div class="flex-stats-container">
-            <div class="stats-box blue-bg-color white-font-color">
-                <p class="rubik-700-bold-18px">לא הגיעו</p>
-                <p class="rubik-500-medium-36px">4</p>
-                <p class="rubik-700-bold-18px">ב- 7 הימים האחרונים</p>
+            <div class="stats-box blue-bg-color ">
+                <div class="inside-stats-box ">
+                <p class="rubik-700-bold-18px size  white-text-color">לא הגיעו</p>
+                <p class="rubik-500-medium-36px white-text-color">4</p>
+                <p class="rubik-700-bold-18px white-text-color">ב- 7 הימים האחרונים</p>
+                </div>
             </div>
             <div class="stats-box">
                 <p class="rubik-400-regular-18px">מתוכם</p>

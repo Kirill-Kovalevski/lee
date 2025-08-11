@@ -1,5 +1,13 @@
 // Single-purpose helper classes, usually small and reusable
 // used like this: u-text-center u-margin-top
+
+// Colors
+.blue-bg-color{
+    background-color: rgb(50, 50, 76);
+}
+
+
+// Layout
 .go-back-button{
     width: 56px;
     height: 56px;
@@ -27,17 +35,8 @@
     flex-direction: column;
     justify-content: space-between;
 }
-@font-face{
-    font-family: 'Rubik Light';
-    src: url('./fonts/Rubik/Rubik-VariableFont_wght.ttf')`format('rubik variable'),
-    src: url(./fonts/Rubik/static/Rubik-Black.ttf) format('rubik black'),
-    src:url(./fonts/Rubik/static/Rubik-Bold.ttf) format('rubik bold'),
-    src:url(./fonts/Rubik/static/Rubik-Medium.ttf) format('rubik medium'),
-    src:url(./fonts/Rubik/static/Rubik-Regular.ttf) format('rubik regular'),
-    src:url(./fonts/Rubik/static/Rubik-Light.ttf) format('rubik light');    
-
-}
 .rubik-700-bold-18px{
+
     font-family: 'rubik bold', sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -54,7 +53,7 @@
     color: rgba(41, 41, 41, 1);
 }
 .rubik-400-regular-18px{
-    font-family: 'Rubik Regular', sans-serif;
+    font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 18px;
     line-height: 100%;
@@ -64,13 +63,11 @@
 .white-font-color{
     color: rgba(255, 255, 255, 1);
 }
-.blue-bg-color{
-    background-color: rgb(50, 50, 76);
-}
+
 .rubik-400-regular-32px{
+    font-family: 'Rubik';;
     width: 127px;
     height: 38px;
-    font-family:'rubik regular';
     font-size: 32px;
     font-weight: 400;
     font-style: normal;
@@ -78,7 +75,49 @@
     letter-spacing: 0.95%;
     color: rgba(41, 41, 41, 1);
 }
+.search-light-icon{
+    border-radius: 12px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    background-color: #ffffff;
+    
+}
+.search-button{
+    width: 28px;
+    height: 28px;
+    border: none;
+    display: none;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+.search-input{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 121px;
+    height: 21px;
+    border: none;
+    gap: 8px;
+    
+}
+.horizontal-line{
+    width: 1141px;
+    height: 0px;
+    top: 247px;
+    left: 438px;
+    border-radius: 1px;
+    background-color: rgba(221, 221, 221, 1);
+    
+    
+}
 
+.white-text-color{
+color: rgb(255, 255, 255)
+}
 // .filter-button{
 //     width: 100px;
 //     height:56px;
@@ -115,11 +154,7 @@
 //     color: rgba(41, 41, 41, 1);
     
 // }
-// .icon-searchlight{
-//     width: 28px;
-//     height: 28px;
-//     color: rgba(41, 41, 41, 1);
-// }
+
 // .sliders-light.icon{
 //     width: 28px;
 //     height: 26.25px;

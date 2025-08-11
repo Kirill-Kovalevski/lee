@@ -32,16 +32,18 @@ body {
 }
 
 .flex-search-container {
-  width: 1141px;
-  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 1141px;
+  height: 72px;
 }
 
 .flex-stats-container {
   width: 1141px;
   height: 196px;
+  padding: 0 0 16px 0;
+  gap: 27px;
   display: flex;
   justify-content: space-between;
   align-items: center;
