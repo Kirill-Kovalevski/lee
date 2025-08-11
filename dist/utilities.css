@@ -1,114 +1,63 @@
+.go-back-button {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  position: absolute;
+  top: 88px;
+  right: 440px;
+}
+
 .filter-button {
   width: 100px;
   height: 56px;
-  padding-top: 15px;
-  padding-right: 16px;
-  padding-bottom: 15px;
-  padding-left: 16px;
+  padding: 15px 16px;
   background-color: #F7F7F7;
   border-radius: 12px;
   margin-left: 439px;
 }
 
-.search-submit-button {
-  border-radius: 12px;
-  height: 12px;
+.blue-stats-box {
+  width: 277px;
+  height: 196px;
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.go-back-button {
-  border-radius: 12px;
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  top: 88px;
-  right: 440px;
-}
-
-.title-absences {
-  width: 127px;
-  height: 38px;
-  font-family: "card-font-bd", sans-serif;
-  font-size: 32px;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 100%;
-  letter-spacing: 0.95%;
-  align-self: center;
-  color: #292929;
-}
-
-.icon-searchlight {
-  width: 28px;
-  height: 28px;
-  color: #292929;
-}
-
-.sliders-light.icon {
-  width: 28px;
-  height: 26.25px;
-  margin-right: 340px;
-  margin-left: 0px;
-  background-color: #000000;
-}
-
-.mid-title {
-  display: block;
-  margin-right: 340px;
-  font-weight: 400;
-  font-size: 32px;
+.rubik-700-bold-18px {
+  font-family: "Rubik Bold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
   line-height: 100%;
   letter-spacing: 0.95%;
   color: #292929;
 }
 
-.filter-text {
-  font-family: "card-font-bd", sans-serif;
+.rubik-500-medium-36px {
+  font-family: "Rubik Medium", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  color: #292929;
+}
+
+.rubik-400-regular-18px {
+  font-family: "Rubik Regular", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 100%;
-  letter-spacing: 0%;
-  color: #707070;
-  margin-left: 8px;
-}
-
-.filter-icon {
-  width: 28px;
-  height: 26.25px;
-  color: #000000;
-  background-color: #F7F7F7;
-}
-
-.up-arrow {
-  width: 8.99px;
-  height: 14px;
-  color: #959595;
-}
-
-@font-face {
-  font-family: "Rubik Light";
-  src: url("./fonts/Rubik/Rubik-VariableFont_wght.ttf");
-}
-.grid-font {
-  font-family: "Rubik Light, sans-serif";
-  font-weight: 400;
-  font-style: normal;
-  size: 20px;
-  line-height: 100%;
   letter-spacing: 0.95%;
-  -ms-text-combine-horizontal: right;
-  color: #959595;
-}
-
-.grid-font-underline {
-  font-family: "Rubik Light, sans-serif";
-  font-weight: 400;
-  font-style: normal;
-  size: 18px;
-  line-height: 100%;
-  letter-spacing: 0.95%;
-  -ms-text-combine-horizontal: right;
   color: #292929;
-  text-decoration: underline;
-  font-style: solid;
-  offset: 0%;
+}
+
+.white-font-color {
+  color: white;
+}
+
+.blue-bg-color {
+  background-color: #32324c;
 }
