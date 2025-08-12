@@ -1,6 +1,7 @@
 // Layout-related classes
 *, *::before, *::after {
     box-sizing: border-box;
+    margin: 0;
 }
 html {
     width: 1920px;
@@ -20,21 +21,19 @@ body {
     
 }
 .grid-container{
+    display: grid;
+    grid-template-rows: repeat(12,1fr);
+    justify-content:baseline;
     width: 1141px;
     height: 928px ;
-    display: grid;
-    // justify-content: center;
-    // align-items: center;
-    // align-content: center;
-
-
 }
 .flex-title-container{
     width: 1141px;
     height: 56px;
-    display:flex;
-    align-items: center;
     gap: 36px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     
 
 }
@@ -52,10 +51,43 @@ body {
     padding: 0 0 16px 0;
     gap: 27px;
     display: flex;
-     justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     align-items: center;
 }
-    
+.user-report-grid-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: repeat(6, 1fr);
+
+
+}
+.full-user-report-box{
+    width: 1141px;
+    height: 61px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+    border-radius: 12px;
+    padding: 16px 0 16px 10px;
+    gap: 18px;
+    background-color:rgba(255, 255, 255, 1)
+}
+.part-user-report-box{
+    width: 1141px;
+    height: 61px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 12px;
+    padding: 16px 0 16px 10px;
+    gap: 18px;
+    background-color:rgba(255, 255, 255, 1) ;
+ 
+
+}
+
 // }
 // @font-face{
 //     font-family: 'card-font-bd';
