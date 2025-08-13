@@ -20,6 +20,11 @@ body {
     
     
 }
+p{
+    margin: 0;
+    padding: 0;
+    gap: 18px;
+}
 .grid-container{
     display: grid;
     grid-template-rows: repeat(12,1fr);
@@ -60,6 +65,7 @@ body {
     justify-content: center;
     align-items: center;
     grid-template-rows: repeat(6, 1fr);
+    gap: 18px;
 
 
 }
@@ -67,7 +73,7 @@ body {
     width: 1141px;
     height: 61px;
     display: flex;
-    justify-content:space-evenly;
+    justify-content:space-around;
     align-items: center;
     border-radius: 12px;
     padding: 16px 0 16px 10px;
@@ -78,7 +84,7 @@ body {
     width: 1141px;
     height: 61px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     border-radius: 12px;
     padding: 16px 0 16px 10px;
