@@ -1,3 +1,7 @@
+.underline {
+  text-decoration: underline;
+}
+
 .blue-bg-color {
   background-color: #32324c;
 }
@@ -44,6 +48,16 @@
   line-height: 100%;
   letter-spacing: 0.95%;
   color: #292929;
+}
+
+.rubik-400-regular-18px-b {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  text-align: right;
 }
 
 .rubik-400-regular-32px {
@@ -147,10 +161,6 @@
   left: 438px;
   border-radius: 1px;
   background-color: #dddddd;
-}
-
-.mini-bar-item {
-  display: block;
 }
 
 .mini-bar-item-one {
