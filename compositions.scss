@@ -91,13 +91,33 @@ p{
     background-color:rgba(255, 255, 255, 1)
 }
 
-@media screen and (max-width:390px)
+@media screen and (min-width:390px)
+and (max-width: 430px)
+and (min-height: 844px)
+and (max-height: 932px)
 {
-body { outline: 4px solid magenta !important; }
+body {
+    display: flex;
+    flex-direction: column;
+}
+.flex-title-container{
+    width: 1141px;
+    height: 56px;
+    gap: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    
+
+}
 
     
     
 }
+
+
+
 // .part-user-report-box{
 //     width: 1141px;
 //     height: 61px;
