@@ -62,3 +62,13 @@ background: rgba(112, 112, 112, 0.1);
 
 
 }
+.table-wrap{
+ display: flex;
+ justify-content: flex-start;
+ flex-direction: column;
+}
+#results[hidden] { display: none; }
+
+.flex-row{
+    display: flex;
+}

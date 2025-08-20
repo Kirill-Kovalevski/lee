@@ -1,10 +1,18 @@
+
 // 1) Grab elements we’ll use
 const searchInput = document.getElementById('search');
 const rowsTbody   = document.getElementById('rows');
 const summary     = document.getElementById('result-summary');
 const emptyMsg    = document.getElementById('empty');
+const form = document.getElementById('search-form');
+const flexRows = Array.from(document.querySelectorAll('.flex-row'));
 
 let allClients = []; // will hold the JSON data
+
+
+// Prevent form submit from refreshing page
+form.addEventListener('submit', e => e.preventDefault());
+
 
 // 2) Helper: normalize strings for case-insensitive search (and ignore accents)
 function normalize(str) {
@@ -107,3 +115,17 @@ async function init() {
     emptyMsg.textContent = 'Could not load client data.';
   }
 }
+searchInput.addEventListener('input', () => {
+  const term = searchInput.value.trim();
+
+  // If nothing typed yet → hide results and stop
+  if (!term) {
+    document.getElementById('results').hidden = true;
+    return;
+  }
+
+  // Otherwise → show results and filter
+  document.getElementById('results').hidden = false;
+  const filtered = filterByName(term);
+  renderRows(filtered, term);
+});

@@ -5,8 +5,14 @@ var searchInput = document.getElementById('search');
 var rowsTbody = document.getElementById('rows');
 var summary = document.getElementById('result-summary');
 var emptyMsg = document.getElementById('empty');
+var form = document.getElementById('search-form');
+var flexRows = Array.from(document.querySelectorAll('.flex-row'));
 var allClients = []; // will hold the JSON data
-// 2) Helper: normalize strings for case-insensitive search (and ignore accents)
+// Prevent form submit from refreshing page
+
+form.addEventListener('submit', function (e) {
+  return e.preventDefault();
+}); // 2) Helper: normalize strings for case-insensitive search (and ignore accents)
 
 function normalize(str) {
   return str.toLowerCase().normalize('NFD') // split accented chars
@@ -129,3 +135,17 @@ function init() {
     }
   }, null, null, [[0, 12]]);
 }
+
+searchInput.addEventListener('input', function () {
+  var term = searchInput.value.trim(); // If nothing typed yet → hide results and stop
+
+  if (!term) {
+    document.getElementById('results').hidden = true;
+    return;
+  } // Otherwise → show results and filter
+
+
+  document.getElementById('results').hidden = false;
+  var filtered = filterByName(term);
+  renderRows(filtered, term);
+});

@@ -25,37 +25,14 @@
                             <p class="title-absences rubik-400-regular-32px">היעדרויות</p>  
                                 </div>
         <div class="flex-search-container second-iphone-parent">
-            <div class="search-box search-child">
-
+                <form id=" search-box search-child search-form">
                    <img  src="/icons/search-light.png" alt="search-light" class="search-light-icon">
                    <label for="search" class="search-label search-input rubik-400-regular-18px search-button search-input"></label>
                     <input type="search" name="s" placeholder=" .חיפוש לפי שם" id="search" autocomplete="off">
+                    </form>
 
-                   
-                
-                <div id="result-summary" aria-live="polite" class="result-summary">
-                    <!--This is where results for screen readers will appear-->
-                </div>
-        
-            </div>
-            <div class="table-wrap">
-                <table class="report">
-                    <thead>
-                        <tr>
-                            <th>שם</th>
-                            <th>נראה</th>
-                            <th>דברנוסף</th>
-                            <th>עודקצת</th>
-                        </tr>
-                    </thead>
-                    <tbody id="rows">
 
-                    </tbody>
-
-                </table>
-                <p id="empty" class="empty" hidden>אין תוצאות, נסו שנית</p>
-
-            </div>
+     
             <div class="filter-box">
                 <img src="/icons/sliders-light (1).png" alt="sliders-light" class="filter-icon">
                 <p class="filter-text rubik-400-regular-18px">סינון</p>
@@ -87,7 +64,7 @@
                 <p class="rubik-700-bold-18px">ללא שיבוץ עתידי</p>
                     </div>
                         </div>
-            <div class="user-report-grid-container">
+            <div class="user-report-grid-container old-user-stats">
                 <p class="user-report-title rubik-400-regular-32px">כותרת</p>
                 <div class="mini-bar">
                     <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-one">שם הלקוח <img src="/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
@@ -96,7 +73,28 @@
                     <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-four">מנוי <img src="/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
 
                 </div>
-                <div class="full-user-report-box">
+                    
+                <!-- One summary (outside or inside results is fine; I’ll keep it inside) -->
+<div id="results" class="table-wrap" hidden>
+  <!-- Live region for SR + visual summary -->
+  <p id="result-summary" class="result-summary" aria-live="polite">0 results</p>
+
+  <!-- Empty state message (hidden by default) -->
+  <p id="empty" class="empty" hidden>אין תוצאות, נסו שנית</p>
+
+  <table class="report" dir="rtl">
+    <thead>
+      <tr>
+        <th>שם</th>
+        <th>נראה</th>
+        <th>דבר נוסף</th>
+        <th>עוד קצת</th>
+      </tr>
+    </thead>
+    <tbody id="rows"><!-- JS injects rows here --></tbody>
+  </table>
+</div>
+                <div class="full-user-report-box flex-row">
                     <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
     
                     <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>

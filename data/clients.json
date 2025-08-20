@@ -1,8 +1,8 @@
 [
-  { "id": 101, "name": "ישראלי ישראל",           "email": "contact@acme.com"},
-  { "id": 102, "name": "דנה כהן  ",    "email": "hello@bluehorizon.io" },
-  { "id": 103, "name": " דור מזרחי",   "email": "team@carmel.co",        "city": "Austin" },
-  { "id": 104, "name": "משה גולן",      "email": "info@deltapartners.com","city": "Chicago" },
-  { "id": 105, "name": "איציק ביציק ",    "email": "hi@emerald.vc",         "city": "San Francisco" },
-  { "id": 106, "name": " שושי משושי",      "email": "support@falconf.com",   "city": "Boston" }
+  {"name": "ישראלי ישראל"},
+  { "id": 102, "name": "דנה כהן  "},
+  { "id": 103, "name": " דור מזרחי" },
+  { "id": 104, "name": "משה גולן"},
+  { "id": 105, "name": "איציק ביציק "},
+  { "id": 106, "name": " שושי משושי" }
 ]
