@@ -17,7 +17,7 @@ html {
 body {
     max-width: 1141px;
     max-height:928px;
-    background-color: rgba(247, 247, 247, 1)
+    background-color: rgba(247, 247, 247, 1);
     
     
 }
@@ -90,11 +90,8 @@ p{
     gap: 18px;
     background-color:rgba(255, 255, 255, 1)
 }
-
 @media only screen
-and (min-width:360px)
 and (max-width:430px)
-and (min-height:844px)
 and (max-height: 932px)
 {
     body{
@@ -103,15 +100,22 @@ max-height: 809px;
 opacity: 1;
 top: 15px;
 left: 15px;
-background-color: rgb(9, 255, 0);
+background-color: rgba(247, 247, 247, 1);
 border-width: 1px;
 }
-.grid-container{
+.grid-container-iphone{
     display: grid;
-    grid-template-columns: 1fr;
-    width: 360px;
-    height: 809px;
-
+    grid-template-columns: repeat(1, 7fr);
+    grid-template-areas: 'title title title'
+    'stats stats stats'
+    'filter'
+    'search'
+    'mid-title'
+    'tags'
+    'name1'
+    'name2'
+    'name3';
+    background-color: #0060dd;
 }
     .flex-title-container{
     width: 360px;
@@ -121,65 +125,82 @@ border-width: 1px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    grid-area: 'title title title';
     
 
 }
+
 .flex-stats-container{
     width: 358px;
     height: 196px;
     padding: 0 0 16px 0;
     gap: 27px;
     display: flex;
-    flex-grow: 1;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    overflow-x:auto;
+    overflow-y:hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling:touch;
+    scroll-snap-type: mandatory;
+    grid-area: 'stats';
 }
-.blue-stats-box{
-    width: 265px;
-    height: 180px;
-    border-radius: 12px;
-    background-color: #4404f5;
-    padding: 12px 16px 12px 16px;
-    gap: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.blue-stats-box {
+width: 265;
+height: 180;
+opacity: 1;
+padding-top: 12px;
+padding-right: 16px;
+padding-bottom: 12px;
+padding-left: 16px;
+gap: 10px;
+border-radius: 12px;
+
     
    
-
 }
 .stats-box{
     width: 265px;
     height: 180px;
     border-radius: 12px;
-    background-color: #250505;
+    background-color: #ffbb00;
     padding: 12px 16px 12px 16px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     align-items: center;
-    
-    
+     flex:0 0 auto;
 }
 .filter-box{
- width: 56;
- height: 56;
-opacity: 1;
-left: 2px;
+ width: 56px;
+ height: 56px;
 border-radius: 12px;
 background-color: orange;
+display: flex;
+justify-content: center;
+grid-area: 'filter';
 
 }
-.filter-button{
+.filter-button {
     display: block;
+    justify-content: center;
     width: 100px;
     height: 56px;
     padding: 15px 16px;
     background-color: #F7F7F7;
     border-radius: 12px;
 }
+.filter-icon{
+    display: block;
+    width: 28px;
+    height: 26.25px;
+    top: 15px;
+    left: 16px;
+}
+.search-child{
+    display: block;
+    grid-area: 6/1/7/1;
 
+}
 .mini-bar{
     display: none;
 }
@@ -199,6 +220,8 @@ background-color: orange;
     display: none;
 }
 }
+
+
 
 
 

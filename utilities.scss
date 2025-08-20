@@ -119,11 +119,13 @@ text-align: right;
     width: 277px;
     height: 196px;
     border-radius: 20px;
-    background-color: #FFFFFF;
+    background-color: rgba(50, 50, 76, 1);
+    color: #F7F7F7;
     padding: 16px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     
    
 }
@@ -234,7 +236,6 @@ text-align: right;
     font-family: 'Rubik';
     color:rgba(112, 112, 112, 1);
 }
-
 
 // .filter-button{
 //     width: 100px;

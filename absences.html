@@ -15,7 +15,7 @@
     <title>Front-End Assignment</title>
 </head>
 <body>
-    <div class="grid-container">
+    <div class="grid-container grid-container-iphone">
 
         <div class="flex-title-container">
 
@@ -24,14 +24,37 @@
                     </button>
                             <p class="title-absences rubik-400-regular-32px">היעדרויות</p>  
                                 </div>
-        <div class="flex-search-container">
-            <div class="search-box">
-                <form  class="search-input" role="search" action="/search" method="GET"  >
-                    <button  class="search-button">
+        <div class="flex-search-container second-iphone-parent">
+            <div class="search-box search-child">
+
                    <img  src="/icons/search-light.png" alt="search-light" class="search-light-icon">
-                    <input type="search" name="s" placeholder="חיפוש לפי שם" class="search-input rubik-400-regular-18px">
-                     </button>
-                </form>
+                   <label for="search" class="search-label search-input rubik-400-regular-18px search-button search-input"></label>
+                    <input type="search" name="s" placeholder=" .חיפוש לפי שם" id="search" autocomplete="off">
+
+                   
+                
+                <div id="result-summary" aria-live="polite" class="result-summary">
+                    <!--This is where results for screen readers will appear-->
+                </div>
+        
+            </div>
+            <div class="table-wrap">
+                <table class="report">
+                    <thead>
+                        <tr>
+                            <th>שם</th>
+                            <th>נראה</th>
+                            <th>דברנוסף</th>
+                            <th>עודקצת</th>
+                        </tr>
+                    </thead>
+                    <tbody id="rows">
+
+                    </tbody>
+
+                </table>
+                <p id="empty" class="empty" hidden>אין תוצאות, נסו שנית</p>
+
             </div>
             <div class="filter-box">
                 <img src="/icons/sliders-light (1).png" alt="sliders-light" class="filter-icon">
@@ -40,12 +63,12 @@
         </div>
         <hr class="horizontal-line">
         
-        <div class="flex-stats-container">
-            <div class="stats-box blue-bg-color">
+        <div class="flex-stats-container second-iphone-child">
+            <div class="blue-stats-box">
                 
-                <p class="rubik-700-bold-18px size white-font-color">לא הגיעו</p>
-                <p class="rubik-500-medium-36px white-font-color">4</p>
-                <p class="rubik-700-bold-18px white-font-color">ב- 7 הימים האחרונים</p>
+                <p class="rubik-700-bold-18px size">לא הגיעו</p>
+                <p class="rubik-500-medium-36px">4</p>
+                <p class="rubik-700-bold-18px">ב- 7 הימים האחרונים</p>
                      </div>
 
             <div class="stats-box">
@@ -146,7 +169,7 @@
 
         
     </div>
-    
+    <script src="app.js" defer></script>
 </body>
 </html>
 

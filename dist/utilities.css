@@ -118,11 +118,13 @@
   width: 277px;
   height: 196px;
   border-radius: 20px;
-  background-color: #FFFFFF;
+  background-color: #32324c;
+  color: #F7F7F7;
   padding: 16px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .search-light-icon {
