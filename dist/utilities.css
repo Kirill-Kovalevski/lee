@@ -229,3 +229,7 @@
   font-family: "Rubik";
   color: #707070;
 }
+
+.user-report-title {
+  display: flex;
+}

@@ -42,3 +42,11 @@
 #user-search {
   color: blueviolet;
 }
+
+#mock-data {
+  color: aquamarine;
+}
+
+.from-mock {
+  outline: 2px dashed transparent;
+}

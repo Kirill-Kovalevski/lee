@@ -49,4 +49,11 @@ searchInput.addEventListener('input', function () {
   filterCards(searchInput.value);
 }); // Initial state: show all cards
 
-filterCards('');
+filterCards(''); // const div = document.createElement('div');
+// div.className = 'full-user-report-box from-mock';
+// div.dataset.name = client.name;
+// div.innerHTML = `
+//   <h3>${client.name}</h3>
+//   <p>Email: ${client.email}</p>
+//   <p>City: ${client.city}</p>
+// `;

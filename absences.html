@@ -20,22 +20,14 @@
         <div class="flex-title-container">
 
             <button class="go-back-button">
-                <img src="/icons/angle-double-left-light.png" alt="Double left arrow icon indicating back navigation, located at the top of the absences page, neutral tone">
+                <img src="/lee/icons/angle-double-left-light.png" alt="Double left arrow icon indicating back navigation, located at the top of the absences page, neutral tone">
                     </button>
                             <p class="title-absences rubik-400-regular-32px">קובלבסקי  </p>  
                                 </div>
         <div class="flex-search-container">
-            <!-- <div class="search-box">
-                <form  class="search-input" role="search" action="/search" method="GET">
-                    <button  class="search-button">
-                   <img  src="/icons/search-light.png" alt="search-light" class="search-light-icon">
-                    <input type="search" name="s" placeholder="חיפוש לפי שם" class="search-input rubik-400-regular-18px" id="q">
-                     </button>
-                </form>
-            </div> -->
-            <div class=" search-box search-wrap">
+            <div class="search-box">
                 <form id="search-form" class="search-input" role="search" action="/search" method="GET">
-                <img  src="/icons/search-light.png" alt="search-light" class="search-light-icon">
+                <img  src="/lee/icons/search-light.png" alt="search-light" class="search-light-icon">
                 <label for="user-search"></label>
                 <input id="user-search"  class="search-input rubik-400-regular-18px" type="search" placeholder="חיפוש לפי שם" autocomplete="off"
                     role="combobox" aria-autocomplete="list" aria-expanded="false"
@@ -45,25 +37,24 @@
                         </div>
 
             <div class="filter-box">
-                <img src="/icons/sliders-light (1).png" alt="sliders-light" class="filter-icon">
+                <img src="/lee/icons/sliders-light (1).png" alt="sliders-light" class="filter-icon">
                 <p class="filter-text rubik-400-regular-18px">סינון</p>
             </div>
         </div>
-        <hr class="horizontal-line">
-        
+        <!--Horizontal Line-->
+        <hr class="horizontal-line"> 
+        <!--Blue and White Boxes-->
         <div class="flex-stats-container">
             <div class="stats-box blue-bg-color">
-                
                 <p class="rubik-700-bold-18px size white-font-color">לא הגיעו</p>
                 <p class="rubik-500-medium-36px white-font-color">4</p>
                 <p class="rubik-700-bold-18px white-font-color">ב- 7 הימים האחרונים</p>
-                     </div>
-
+            </div>
             <div class="stats-box">
                 <p class="rubik-400-regular-18px">מתוכם</p>
                 <p class="rubik-500-medium-36px">2</p>
                 <p class="rubik-700-bold-18px">לא נרשמו כלל</p>
-                    </div>
+            </div>
             <div class="stats-box">
                  <p class="rubik-400-regular-18px">מתוכם</p>
                 <p class="rubik-500-medium-36px">2</p>
@@ -73,61 +64,74 @@
                  <p class="rubik-400-regular-18px">מתוכם</p>
                 <p class="rubik-500-medium-36px">2</p>
                 <p class="rubik-700-bold-18px">ללא שיבוץ עתידי</p>
-                    </div>
-                        </div>
+            </div>
+    </div>
+            <!--User stats-->
             <div class="user-report-grid-container" id="search-grid">
                 <p class="user-report-title rubik-400-regular-32px">כותרת</p>
+                <!--Middle title bar-->
                 <div class="mini-bar">
-                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-one">שם הלקוח <img src="/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
-                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-two"> נראה לאחרונה <img src="/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
-                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-three ">שיבוץ עתידי <img src="/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
-                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-four">מנוי <img src="/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
+                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-one">שם הלקוח <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
+                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-two"> נראה לאחרונה <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
+                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-three ">שיבוץ עתידי <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
+                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-four">מנוי <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
+                </div>
+                <!--This is where the mock JSON shows-->
+                <div id="results-area rubik-400-regular-18px"></div>
+                <div class="cards is-hidden rubik-400-regular-18px is-hidden"></div>
+                <div class="full-user-report-box search-block-one">
+                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
+                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
+                <div class="double-p">
+                    <p class=" rubik-400-regular-18px">23/06</p>
+                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
+                    </div>
+                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
+                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
+                </div>
+                <div class="full-user-report-box search-block-one">
+                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 2</p>
+                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
+                    <div class="double-p">
+                    <p class=" rubik-400-regular-18px">23/06</p>
+                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
+                    </div>
+                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
+                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
+                </div>
+                <div class="full-user-report-box search-block-one">
+                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 3</p>
+    
+                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
+                    <div class="double-p">
+                    <p class=" rubik-400-regular-18px">23/06</p>
+                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
+                    </div>
+                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
+                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
+                </div>
+                <div class="full-user-report-box search-block-one">
+                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 4</p>
+    
+                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
+                    <div class="double-p">
+                    <p class=" rubik-400-regular-18px">23/06</p>
+                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
+                    </div>
+                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
+                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
+                </div>
+               
 
-                </div>
-                <div class="full-user-report-box" data-name="search-block-one">
-                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
-    
-                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
-                    <div class="double-p">
-                    <p class=" rubik-400-regular-18px">23/06</p>
-                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
-                    </div>
-                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
-                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
-                </div>
-                <div class="full-user-report-box" data-name="search-block-one">
-                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
-    
-                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
-                    <div class="double-p">
-                    <p class=" rubik-400-regular-18px">23/06</p>
-                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
-                    </div>
-                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
-                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
-                </div>
-                <div class="full-user-report-box" data-name="search-block-one">
-                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
-    
-                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
-                    <div class="double-p">
-                    <p class=" rubik-400-regular-18px">23/06</p>
-                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
-                    </div>
-                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
-                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
-                </div>
-                <div class="full-user-report-box" data-name="search-block-one">
-                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
-    
-                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
-                    <div class="double-p">
-                    <p class=" rubik-400-regular-18px">23/06</p>
-                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
-                    </div>
-                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
-                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
-                </div>
+
+                   <!-- <div class="search-box">
+                <form  class="search-input" role="search" action="/search" method="GET">
+                    <button  class="search-button">
+                   <img  src="/icons/search-light.png" alt="search-light" class="search-light-icon">
+                    <input type="search" name="s" placeholder="חיפוש לפי שם" class="search-input rubik-400-regular-18px" id="q">
+                     </button>
+                </form>
+            </div> -->
                    <!-- <div class="full-user-report-box" data-name="search-block-two">
                     <p class=" rubik-400-regular-18px underline">ישראל ישראלי 1</p>
     
