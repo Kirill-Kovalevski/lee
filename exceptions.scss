@@ -60,5 +60,15 @@ opacity: 1;
 border-radius: 6px;
 background: rgba(112, 112, 112, 0.1);
 
+//search bar logic
+}
+.is-hidden {
+    display: none !important;
+}
 
+#search-form{
+    color: aqua;
+}
+#user-search{
+    color: blueviolet;
 }

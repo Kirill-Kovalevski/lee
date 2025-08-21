@@ -30,3 +30,15 @@
   border-radius: 6px;
   background: rgba(112, 112, 112, 0.1);
 }
+
+.is-hidden {
+  display: none !important;
+}
+
+#search-form {
+  color: aqua;
+}
+
+#user-search {
+  color: blueviolet;
+}
