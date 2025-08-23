@@ -96,6 +96,18 @@ text-align: right;
     color: rgba(42, 42, 42, 1);
     
 }
+.rubik-400-regular-12px{
+    font-family: 'Rubik';
+    width: 36px;
+    height: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: rgba(42, 42, 42, 1);
+    
+}
 
 // Layout
 .go-back-button{
@@ -360,6 +372,24 @@ text-align: right;
 
 /* Hide utility */
 .is-hidden { display: none !important; }
+
+.last-days-text{
+  color:#292929;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+.chevron-icon{
+  display: flex;
+  justify-self: end;
+  align-items: flex-end;
+  width: 20;
+height: 20;
+top: 194px;
+left: 450px;
+opacity: 1;
+
+}
 
 
 
