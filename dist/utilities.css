@@ -163,19 +163,30 @@
   background-color: #dddddd;
 }
 
+.mini-bar-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .mini-bar-item-one {
   width: 277px;
   height: 29px;
   padding-right: 10px;
   gap: 10px;
-  grid-area: 2/2/3/4;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .mini-bar-item-two {
   width: 377px;
   height: 29px;
   padding-right: 10px;
-  gap: 10px;
+  opacity: 1;
+  display: flex;
+  justify-content: first baseline;
+  align-content: center;
 }
 
 .mini-bar-item-three {
@@ -183,6 +194,7 @@
   height: 29px;
   padding-right: 10px;
   gap: 10px;
+  opacity: 1;
 }
 
 .mini-bar-item-four {
@@ -190,6 +202,10 @@
   height: 29px;
   padding-right: 10px;
   gap: 10px;
+  opacity: 1;
+  display: flex;
+  justify-self: flex-start;
+  align-self: flex-start;
 }
 
 .double-p {
@@ -232,4 +248,162 @@
 
 .user-report-title {
   display: flex;
+}
+
+:root {
+  --nav-w: 340px;
+  /* width of left navbar */
+  --gap: 12px;
+  --border: #e5e7eb;
+  --tag-bg: #eef2ff;
+  --tag-bd: #c7d2fe;
+}
+
+/* Layout: left fixed nav, content pushed right */
+.filter-nav {
+  position: fixed;
+  inset: 0 auto 0 0;
+  /* left side */
+  width: var(--nav-w);
+  background: #fff;
+  border-right: 1px solid var(--border);
+  padding: 16px;
+  overflow: auto;
+}
+
+.page-content {
+  margin-left: var(--nav-w);
+  /* keep content out from under the nav */
+  padding: 16px;
+}
+
+/* Title row + tags */
+.page-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--tag-bg);
+  border: 1px solid var(--tag-bd);
+  font-size: 0.9rem;
+}
+
+.filter-tag button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
+}
+
+/* Sidebar top header: right has 2 boxes, left has 1 */
+.filter-top {
+  display: flex;
+  gap: var(--gap);
+  margin-bottom: 16px;
+}
+
+.top-right, .top-left {
+  display: flex;
+  gap: var(--gap);
+}
+
+.top-right {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.top-left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.mini-box {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fafafa;
+  flex: 1;
+}
+
+/* Form structure */
+.filter-form fieldset {
+  border: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.filter-form legend {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.filter-form label {
+  display: block;
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.filter-actions {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding-top: 12px;
+  margin-top: 12px;
+  display: flex;
+  gap: 8px;
+  border-top: 1px solid var(--border);
+}
+
+/* Buttons */
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: #f3f4f6;
+  color: #111827;
+  border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+.full-user-report-box {
+  flex: 0 1 280px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px;
+  background: #fff;
+}
+
+/* Hide utility */
+.is-hidden {
+  display: none !important;
 }

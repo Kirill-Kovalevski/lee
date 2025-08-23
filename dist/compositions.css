@@ -13,8 +13,6 @@ html {
 }
 
 body {
-  max-width: 1141px;
-  max-height: 928px;
   background-color: #f7f7f7;
 }
 
@@ -51,6 +49,8 @@ p {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  justify-items: flex-end;
+  align-content: flex-end;
   width: 1141px;
   height: 72px;
 }
@@ -86,6 +86,8 @@ p {
   padding: 16px 0 16px 10px;
   gap: 18px;
   background-color: white;
+  width: 1140;
+  opacity: 1;
 }
 
 @media only screen and (min-width: 390px) and (min-height: 844px) and (max-width: 430px) and (max-height: 932px) {
@@ -107,15 +109,5 @@ p {
     align-items: center;
     justify-content: flex-start;
     background-color: #f7c900;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-
-  .user-report-grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
   }
 }

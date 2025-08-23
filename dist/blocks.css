@@ -17,8 +17,10 @@
 
 .filter-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  justify-self: end;
+  align-self: flex-end;
   width: 100px;
   height: 56px;
   border-radius: 12px;
@@ -52,6 +54,10 @@
   border-radius: 12px;
   padding: 16px 0 16px 10px;
   gap: 18px;
+  width: 1140;
+  opacity: 1;
+  top: -61px;
+  left: -1px;
 }
 
 .grid-item {
@@ -60,4 +66,8 @@
   align-items: center;
   gap: 10px;
   padding-right: 10px;
+}
+
+.title-container {
+  display: flex;
 }
