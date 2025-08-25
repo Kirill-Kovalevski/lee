@@ -262,15 +262,6 @@
   display: flex;
 }
 
-:root {
-  --nav-w: 340px;
-  /* width of left navbar */
-  --gap: 12px;
-  --border: #e5e7eb;
-  --tag-bg: #eef2ff;
-  --tag-bd: #c7d2fe;
-}
-
 /* Layout: left fixed nav, content pushed right */
 .filter-nav {
   position: fixed;

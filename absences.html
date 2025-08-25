@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="dist/blocks.css">
     <link rel="stylesheet" href="dist/utilities.css">
     <link rel="stylesheet" href="dist/exceptions.css">
-    <script src="app.js" defer></script>
-    <script src="tags.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -54,7 +52,7 @@
         <!--Horizontal Line-->
         <hr class="horizontal-line"> 
         <!--Blue and White Boxes-->
-        <div class="flex-stats-container">
+        <div id="scrolling" class="flex-stats-container">
             <div class="stats-box blue-bg-color">
                 <p class="rubik-700-bold-18px size white-font-color">לא הגיעו</p>
                 <p class="rubik-500-medium-36px white-font-color">4</p>
@@ -76,6 +74,11 @@
                 <p class="rubik-700-bold-18px">ללא שיבוץ עתידי</p>
             </div>
     </div>
+  <!--Boxes shift and appear under stats boxes-->
+<div id="block-top"></div>
+<div id="block-bottom"></div>
+
+
             <!--Users-->
             <div class="user-report-grid-container">
                 <div id="appearing-tag" class="title-container tag-label mid-title rubik-400-regular-12px">
@@ -243,6 +246,9 @@
   </div>
 
 </div>
+<script src="app.js" defer></script>
+    <script src="tags.js" defer></script>
+    <script src="iphone.js" defer></script>
 </body>
 </html>
 

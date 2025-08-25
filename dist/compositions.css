@@ -91,61 +91,119 @@ p {
 
 /* Target iPhone 12 Pro and devices up to ~430px wide */
 @media only screen and (max-width: 430px) {
-  .body {
-    width: 22.5rem;
-    height: 50.5rem;
-    top: 0.938rem;
-    left: 0.938rem;
-    width: 360;
+  html {
+    width: 390px;
+    height: 844px;
+    border: 1px;
+    background-color: #f7f7f7;
+  }
+
+  body {
+    width: 360px;
+    height: 809px;
     opacity: 1;
+    top: 15px;
+    left: 15px;
+    background-color: #f7f7f7;
   }
 
   .grid-container {
     display: grid;
     grid-template-columns: 1fr;
-    background-color: tomato;
+    justify-content: baseline;
+    width: 360px;
+    height: 809px;
+    top: 15px;
+    left: 15px;
+    opacity: 1;
   }
 
   .flex-title-container {
     width: 360px;
     height: 82px;
+    opacity: 1;
+    padding-top: 13px;
+    padding-right: 15px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    gap: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
   }
 
-  .controls {
-    flex-direction: column;
-    /* stack filter + dropdown vertically */
-    gap: 8px;
+  .flex-stats-container {
+    width: 1141px;
+    height: 196px;
+    padding: 0 0 16px 0;
+    gap: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    scrollbar-width: auto;
   }
 
-  .tagbar {
-    width: 100%;
-    /* take full width instead of 375px */
-    height: 100%;
-    /* fill the screen */
-    border-radius: 0;
-    /* remove rounded corners if any */
+  .filter-box {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .submit-btn {
-    width: calc(100% - 32px);
-    /* full width minus padding */
-    margin-left: 16px;
+  .filter-box p {
+    width: 1px;
   }
 
-  #appearing-tag {
-    flex-direction: column;
-    /* stack title + tags vertically */
-    align-items: flex-start;
-    gap: 6px;
+  .filter-icon {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
   }
 
-  .tag-label {
-    width: auto;
-    /* shrink-to-fit */
-    font-size: 12px;
-    padding: 0 6px;
+  .flex-search-container {
+    display: flex;
+    flex-direction: row-reverse;
   }
+
+  #block-top {
+    display: flex;
+    justify-content: flex-end;
+    /* push content to the right */
+    align-items: center;
+  }
+
+  #block-top > * {
+    margin-left: auto;
+    /* ensure the child hugs the right side */
+  }
+}
+.tagbar {
+  width: 100%;
+  /* take full width instead of 375px */
+  height: 100%;
+  /* fill the screen */
+  border-radius: 0;
+  /* remove rounded corners if any */
+}
+
+.submit-btn {
+  width: calc(100% - 32px);
+  /* full width minus padding */
+  margin-left: 16px;
+}
+
+#appearing-tag {
+  flex-direction: column;
+  /* stack title + tags vertically */
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.tag-label {
+  width: auto;
+  /* shrink-to-fit */
+  font-size: 12px;
+  padding: 0 6px;
 }

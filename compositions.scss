@@ -94,31 +94,98 @@ p{
 }
 /* Target iPhone 12 Pro and devices up to ~430px wide */
 @media only screen and (max-width: 430px) {
-    .body{
-        width: 22.5rem;
-        height: 50.5rem;
-        top:0.938rem;
-        left:0.938rem;
-        width: 360;
-        opacity: 1;
 
-    }
-    .grid-container{
-        display: grid;
-        grid-template-columns: 1fr;
-        background-color: tomato;
-    }
-    .flex-title-container{
-        width:360px;
-        height: 82px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-    }
-  .controls {
-    flex-direction: column;  /* stack filter + dropdown vertically */
-    gap: 8px;
-  }
+html {
+    width: 390px;
+    height: 844px;
+    border: 1px;
+    background-color: rgba(247, 247, 247, 1);
+    
+
+}
+body {
+    width: 360px;
+    height: 809px;
+    opacity: 1;
+    top: 15px;
+    left: 15px;
+    background-color: rgba(247, 247, 247, 1);
+
+    
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content:baseline;
+    width: 360px;
+    height: 809px ;
+    top: 15px;
+    left: 15px;
+    opacity: 1;
+
+
+}
+.flex-title-container{
+    width: 360px;
+    height: 82px;
+    opacity: 1;
+    padding-top: 13px;
+    padding-right: 15px;
+    padding-bottom: 13px;
+    padding-left: 15px;
+    gap: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+
+}
+.flex-stats-container{
+    width: 1141px;
+    height: 196px;
+    padding: 0 0 16px 0;
+    gap: 27px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    scrollbar-width:auto;
+}
+.filter-box{
+    width: 56px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.filter-box p{
+    width: 1px;
+}
+.filter-icon{
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+}
+.flex-search-container{
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+#block-top {
+  display: flex;
+  justify-content: flex-end; /* push content to the right */
+  align-items: center;
+}
+
+#block-top > * {
+  margin-left: auto; /* ensure the child hugs the right side */
+}
+
+
+
+}
+
 
   .tagbar {
     width: 100%;            /* take full width instead of 375px */
@@ -142,5 +209,5 @@ p{
     font-size: 12px;
     padding: 0 6px;
   }
-}
+
 
