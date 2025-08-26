@@ -260,6 +260,8 @@ text-align: right;
 }
 .user-report-title{
     display: flex;
+    flex-direction: row;
+    background-color: #F7F7F7;
 }
 
 //Filter navbar

@@ -240,6 +240,7 @@ gap: 10px;
 display: flex;
 justify-content: flex-start;
 align-items: center;
+background-color: #717171;;
 }
 
 .submit-btn p{
@@ -258,23 +259,6 @@ text-align: center;
 color: #FFFFFF;
 }
 
-/* Submit button pinned to bottom */
-
-
-// .hidden {
-//   display: none;
-// }
-// .controls {
-//   display: flex;
-//   gap: 10px;
-//   margin: 20px;
-// }
-
-
- 
-  
-  
-// }
 .tag-options{
     display: flex;
     flex-direction: column;
@@ -282,16 +266,6 @@ color: #FFFFFF;
     align-items: start;
     background-color: #f5f5f5;
 }
-
-// .tagbar.show {
-//   transform: translateX(0); /* slides into view */
-// }
-
-// .tagbar-header {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
 
 
 
@@ -308,12 +282,6 @@ color: #FFFFFF;
 
 }
 
-
-
-
-
-// }
-// //Appearing-tag
 .tag-label {
 width: 95px;
 height: 36px;
@@ -329,8 +297,8 @@ font-size: 12px;
 line-height: 100%;
 letter-spacing: 0%;
 text-align: center;
-background-color: #DDDDDD;
-border: 1px solid #717171;
+background-color: #717171;
+border: 1px solid;
 
  
 

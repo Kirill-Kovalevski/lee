@@ -260,6 +260,8 @@
 
 .user-report-title {
   display: flex;
+  flex-direction: row;
+  background-color: #F7F7F7;
 }
 
 /* Layout: left fixed nav, content pushed right */

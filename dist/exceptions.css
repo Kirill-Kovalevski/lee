@@ -245,6 +245,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  background-color: #717171;
 }
 
 .submit-btn p {
@@ -263,7 +264,6 @@
   color: #FFFFFF;
 }
 
-/* Submit button pinned to bottom */
 .tag-options {
   display: flex;
   flex-direction: column;
@@ -296,8 +296,8 @@
   line-height: 100%;
   letter-spacing: 0%;
   text-align: center;
-  background-color: #DDDDDD;
-  border: 1px solid #717171;
+  background-color: #717171;
+  border: 1px solid;
 }
 
 .box-one {
