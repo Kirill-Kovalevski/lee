@@ -1,0 +1,468 @@
+.rubik-700-bold-18px {
+  font-family: "rubik bold", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  color: #292929;
+}
+
+.rubik-700-bold-24px {
+  font-family: Rubik;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  text-align: right;
+}
+
+.rubik-600-semiBold-18px {
+  font-family: Rubik;
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 18px;
+  line-height: 18px;
+  letter-spacing: 0%;
+  text-align: right;
+}
+
+.rubik-500-medium-36px {
+  font-family: "Rubik Medium", sans-serif;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  color: #292929;
+}
+
+.rubik-400-regular-18px {
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  color: #292929;
+}
+
+.rubik-400-regular-18px-b {
+  font-family: "Rubik";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  text-align: right;
+}
+
+.rubik-400-regular-32px {
+  font-family: "Rubik";
+  width: 127px;
+  height: 38px;
+  font-size: 32px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  color: #292929;
+}
+
+.rubik-400-regular-20px {
+  font-family: "Rubik";
+  width: 127px;
+  height: 38px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  color: #959595;
+}
+
+.rubik-400-regular-14px {
+  font-family: "Rubik";
+  width: 36px;
+  height: 17px;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #2a2a2a;
+}
+
+.rubik-400-regular-12px {
+  font-family: "Rubik";
+  width: 36px;
+  height: 17px;
+  font-size: 12px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: #2a2a2a;
+}
+
+.rubik-400-regular-16px {
+  font-family: Rubik;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: right;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 0%;
+  text-decoration-skip-ink: auto;
+}
+
+.rubik-400-regular-10px {
+  font-family: Rubik;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 10px;
+  line-height: 10px;
+  letter-spacing: 0%;
+  text-align: right;
+}
+
+html {
+  width: 1920px;
+  height: 1080px;
+  opacity: 1;
+  display: flex;
+  align-content: center;
+}
+
+body {
+  width: 1141px;
+  height: 928px;
+  left: 390px;
+  padding-top: 100px;
+  gap: 33px;
+  opacity: 1;
+}
+
+/* ---- Desktop search + filter row ---- */
+.phone-header {
+  display: flex;
+  align-items: center;
+}
+
+.phone-main-title-text {
+  width: 127px;
+  height: 38px;
+  opacity: 1;
+}
+
+.phone-return-btn {
+  width: 56px;
+  height: 56px;
+  gap: 10px;
+  opacity: 1;
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.search-filter-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* search left, button right in RTL too */
+  width: 1141px;
+  height: 72px;
+  margin: 0;
+  padding: 0;
+  gap: 0;
+  /* no gaps/margins/padding */
+}
+
+/* Search box fills remaining space, same row */
+.search-filter-desktop .search-box {
+  display: flex;
+  align-items: center;
+  width: calc(1141px - 72px);
+  /* full width minus button */
+  height: 72px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  /* no inner padding per your requirement */
+}
+
+/* Keep your icon/input visuals */
+.search-filter-desktop .search-icon-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  /* square icon area */
+}
+
+.search-filter-desktop .search-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.search-filter-desktop .search-input {
+  flex: 1 1 auto;
+  height: 100%;
+  border: none;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: right;
+  text-transform: capitalize;
+  padding: 0 12px;
+  /* minimal text breathing room (set to 0 if you want literally none) */
+}
+
+.phone-grid-item {
+  width: 1141px;
+  height: 196px;
+  max-width: 1141px;
+  padding-bottom: 16px;
+  gap: 27px;
+  opacity: 1;
+}
+
+.mini-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1141px;
+  border-radius: 12px;
+  padding: 16px 0 16px 10px;
+  gap: 18px;
+  width: 1140px;
+  opacity: 1;
+  top: -61px;
+  left: -1px;
+}
+
+.mini-bar-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.mini-bar-item-one {
+  width: 277px;
+  height: 29px;
+  padding-right: 10px;
+  gap: 10px;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.mini-bar-item-two {
+  width: 377px;
+  height: 29px;
+  padding-right: 10px;
+  opacity: 1;
+  display: flex;
+  justify-content: first baseline;
+  align-content: center;
+}
+
+.mini-bar-item-three {
+  width: 140px;
+  height: 29px;
+  padding-right: 10px;
+  gap: 10px;
+  opacity: 1;
+}
+
+.mini-bar-item-four {
+  width: 165px;
+  height: 29px;
+  padding-right: 10px;
+  gap: 10px;
+  opacity: 1;
+  display: flex;
+  justify-self: flex-start;
+  align-self: flex-start;
+}
+
+.full-user-report-box {
+  width: 1141px;
+  height: 61px;
+  max-width: 1141px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 10px;
+  gap: 18px;
+  opacity: 1;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.double-p {
+  display: flex;
+}
+
+/* Filter button on the right: 72x72, no padding */
+.search-filter-desktop .filter-button {
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  /* no extra spacing */
+  cursor: pointer;
+}
+
+.search-filter-desktop .filter-icon {
+  width: 28px;
+  height: 26.25px;
+}
+
+/* Hide phone-only controls on desktop */
+.filter-wrap {
+  display: none;
+}
+
+/* If you have another top-level .search-box for phone, hide it on desktop */
+.main-phone-grid > .search-box {
+  display: none;
+}
+
+.phone-stat-card {
+  max-width: 265px;
+  width: 265px;
+  height: 180px;
+  padding-top: 12px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  padding-left: 16px;
+  gap: 10px;
+  opacity: 1;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.phone-stat-card > p {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* ---- Title + tags row ---- */
+.title-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+/* Tags appear horizontally next to the title (you already use these styles on phone) */
+.title-line .appearing-tags {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ---- Desktop right-side filter drawer ---- */
+.filter-bar-wrap {
+  position: fixed;
+  top: 0;
+  inset-inline-end: 0;
+  /* right side (RTL/LTR aware) */
+  height: 100dvh;
+  width: 358px;
+  /* same look/width as phone */
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  pointer-events: none;
+  /* don't block page when closed */
+  z-index: 1000;
+}
+
+.filter-bar-wrap.open {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+/* Inside the drawer: reuse your phone styles */
+#filterBar {
+  height: 100%;
+  max-height: none;
+  /* ignore phone collapse on desktop */
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 0;
+}
+
+#filterBar .filter-scroll {
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.user-report-row {
+  display: none;
+}
+
+.white-font {
+  color: #FFFFFF;
+}
+
+.blue-stat-box {
+  background-color: #32324C;
+}
+
+/* Make sure your main content stays in flow; the drawer is overlayed,
+   so nothing under .filter-bar-wrap consumes layout space on desktop. */
+.sky-blue-grid-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  height: 29px;
+  border-radius: 6px;
+  padding: 4px 6px 4px 6px;
+  gap: 10px;
+  background-color: rgba(54, 173, 193, 0.1);
+}
+
+.sky-font-color {
+  color: #36adc1;
+  font-family: "Rubik", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+}
+
+.grey-grid-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 29px;
+  border-radius: 6px;
+  padding: 4px 6px 4px 6px;
+  gap: 10px;
+  background-color: rgba(42, 42, 42, 0.05);
+}
+
+.underline {
+  text-decoration: underline;
+}
