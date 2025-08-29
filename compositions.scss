@@ -1,227 +1,976 @@
 
-// // Layout-related classes
-// *, *::before, *::after {
-//     box-sizing: border-box;
-//     margin: 0;
-// }
-// html {
-//     width: 1920px;
-//     height: 1080px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     background-color: rgba(247, 247, 247, 1)
+
+
+
+
+
+// // // Layout-related classes
+// // *, *::before, *::after {
+// //     box-sizing: border-box;
+// //     margin: 0;
+// // }
+// // html {
+// //     width: 1920px;
+// //     height: 1080px;
+// //     background-color: rgba(247, 247, 247, 1)
     
 
-// }
-// body {
-//     background-color: rgba(247, 247, 247, 1);
+// // }
+// // body {
+// // margin: 0;
+// // padding: 0;
+// // width: 1141px;
+// // height: 928px;
+// // opacity: 1;
+// // padding-top: 100px;
+// // gap: 33px;
+// // background-color: rgba(247, 247, 247, 1);
 
     
-// }
-// p{
-//     margin: 0;
-//     padding: 0;
-//     gap: 18px;
-// }
-// .flex-box-center{
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-// }
-// .grid-container{
-//     display: grid;
-//     grid-template-rows: repeat(12,1fr);
-//     justify-content:baseline;
-//     width: 1141px;
-//     height: 928px ;
-// }
-// .flex-title-container{
-//     width: 1141px;
-//     height: 56px;
-//     gap: 36px;
-//     display: flex;
-//     justify-content: flex-start;
-//     align-items: center;
+// // }
+// // /* ---------- Desktop defaults (>430px) ---------- */
+
+// // /* Show desktop row under header */
+// // .search-filter-desktop {
+// //   display: flex;
+// //   align-items: center;
+// //   gap: 12px;
+// //   margin: 8px 15px 0;
+// // }
+
+// // .search-filter-desktop .search-box {
+// //   flex: 1 1 auto;
+// //   width: auto;
+// //   height: 56px; /* keeps your box size */
+// // }
+
+// // /* Desktop filter button look (56x56 like phone) */
+// // .search-filter-desktop .filter-button {
+// //   width: 56px;
+// //   height: 56px;
+// //   border-radius: 12px;
+// //   background: #FFFFFF;
+// //   border: none;
+// //   display: flex;
+// //   align-items: center;
+// //   justify-content: center;
+// //   padding: 0;
+// //   cursor: pointer;
+// // }
+
+// // /* Hide phone-only controls on desktop */
+// // .filter-wrap { display: none; }
+
+// // /* If you had a top-level phone search box, hide it on desktop.
+// //    (We still show the one inside .search-filter-desktop) */
+// // .main-phone-grid > .search-box { display: none; }
+
+// // /* Put mid-title and tags on the same line */
+// // .title-line {
+// //   display: flex;
+// //   align-items: center;
+// //   gap: 10px;
+// //   margin: 8px 15px 0;
+// // }
+
+// // /* Make tags a horizontal scrolling row (you already had this; included for clarity) */
+// // .title-line .appearing-tags {
+// //   display: inline-flex;
+// //   gap: 6px;
+// //   overflow-x: auto;
+// //   overflow-y: hidden;
+// //   white-space: nowrap;
+// //   -webkit-overflow-scrolling: touch;
+// // }
+
+// // /* ---------- Desktop right-side filter panel (side drawer) ---------- */
+// // /* On desktop, make the filter container fixed on the right so it doesn't take layout space */
+// // @media (min-width: 431px) {
+// //   .filter-bar-wrap {
+// //     position: fixed;
+// //     top: 0;
+// //     inset-inline-end: 0;  /* right in RTL/LTR */
+// //     height: 100dvh;
+// //     width: 360px;         /* phone-like width */
+// //     pointer-events: none; /* block clicks when closed */
+// //     z-index: 1000;
+// //     /* start hidden off-canvas */
+// //     transform: translateX(100%);
+// //     transition: transform .25s ease;
+// //   }
+
+// //   /* When open, slide in and enable interaction */
+// //   .filter-bar-wrap.open {
+// //     transform: translateX(0);
+// //     pointer-events: auto;
+// //   }
+
+// //   /* Make inner card fill the drawer height and scroll */
+// //   #filterBar {
+// //     max-height: none;     /* ignore collapsible height on desktop */
+// //     height: 100%;
+// //     border-radius: 0;     /* drawer look */
+// //   }
+// //   #filterBar .filter-scroll {
+// //     max-height: none;
+// //     height: 100%;
+// //     overflow-y: auto;
+// //     -webkit-overflow-scrolling: touch;
+// //   }
+// // }
+
+
+// // .main-phone-grid{
+// //     display: grid;
+// //     grid-template-rows: repeat(6, 1fr);
+// //     align-items: center;
+// //     justify-content: flex-start;
+// //     align-content: center;
+// //     justify-items: center;
+// // }
+// // p{
+// //     margin: 0;
+// //     padding: 0;
+// //     gap: 18px;
+// // }
+// // .phone-header{
+// // display: flex;
+// // justify-content: flex-start;
+// // align-items: center;
+// // align-content: center;
+// // width: 1141px;
+// // height: 56px;
+// // opacity: 1;
+// // gap: 36px;
+// // margin: 0px;
+// // padding: 0px;
+
+
+// // }
+// // .phone-main-title-text{
+// // width: 127px;
+// // height: 38px;
+// // opacity: 1;
+// // margin: 0;
+// // padding: 0;
+
+// // }
+
+// //  .phone-grid-item{
+// //      display: flex;
+// //      flex-direction: row;
+// //      justify-content: center;
+// //      align-items: center;
+// //      align-content: center;
+// //      width: 1141px;
+// //      height: 196px;
+// //      max-width: 1141px;
+// //      padding-bottom: 16px;
+// //      gap: 27px;
+// //      opacity: 1;
+// //      background-color: rgb(247, 247, 247);
+// // }
+
+  
+    
+// //     //Fonts
+// // .rubik-700-bold-18px{
+
+// //     font-family: 'rubik bold', sans-serif;
+// //     font-weight: 700;
+// //     font-size: 18px;
+// //     line-height: 100%;
+// //     letter-spacing: 0.95%;
+// //     color: rgba(41, 41, 41, 1);
+// // }
+// // .rubik-700-bold-24px{
+// // font-family: Rubik;
+// // font-weight: 700;
+// // font-style: Bold;
+// // font-size: 24px;
+// // line-height: 24px;
+// // letter-spacing: 0px;
+// // text-align: right;
+
+// // }
+// // .rubik-600-semiBold-18px{
+// // font-family: Rubik;
+// // font-weight: 600;
+// // font-style: SemiBold;
+// // font-size: 18px;
+// // line-height: 18px;
+// // letter-spacing: 0%;
+// // text-align: right;
+
+// // }
+// // .rubik-500-medium-36px{
+// //     font-family: 'Rubik Medium', sans-serif;
+// //     font-weight: 500;
+// //     font-size: 36px;
+// //     line-height: 100%;
+// //     letter-spacing: 0.95%;
+// //     color: rgba(41, 41, 41, 1);
+// // }
+// // .rubik-400-regular-18px{
+// //     font-family: 'Rubik', sans-serif;
+// //     font-weight: 400;
+// //     font-size: 18px;
+// //     line-height: 100%;
+// //     letter-spacing: 0.95%;
+// //     color: rgba(41, 41, 41, 1);
+// // }
+// // .rubik-400-regular-18px-b{
+// // font-family: 'Rubik';
+// // font-weight: 400;
+// // font-style: normal;
+// // font-size: 18px;
+// // line-height: 100%;
+// // letter-spacing: 0.95%;
+// // text-align: right;
+
+// // }
+
+
+// // .rubik-400-regular-32px{
+// //     font-family: 'Rubik';
+// //     width: 127px;
+// //     height: 38px;
+// //     font-size: 32px;
+// //     font-weight: 400;
+// //     font-style: normal;
+// //     line-height: 100%;
+// //     letter-spacing: 0.95%;
+// //     color: rgba(41, 41, 41, 1);
+// // }
+// // .rubik-400-regular-20px{
+// //     font-family: 'Rubik';
+// //     width: 127px;
+// //     height: 38px;
+// //     font-size: 20px;
+// //     font-weight: 400;
+// //     font-style: normal;
+// //     line-height: 100%;
+// //     letter-spacing: 0.95%;
+// //     color: rgba(149, 149, 149, 1);
+// // }
+// // .rubik-400-regular-14px{
+// //     font-family: 'Rubik';
+// //     width: 36px;
+// //     height: 17px;
+// //     font-size: 14px;
+// //     font-weight: 400;
+// //     font-style: normal;
+// //     line-height: 100%;
+// //     letter-spacing: 0%;
+// //     color: rgba(42, 42, 42, 1);
+    
+// // }
+// // .rubik-400-regular-12px{
+// //     font-family: 'Rubik';
+// //     width: 36px;
+// //     height: 17px;
+// //     font-size: 12px;
+// //     font-weight: 400;
+// //     font-style: normal;
+// //     line-height: 100%;
+// //     letter-spacing: 0%;
+// //     color: rgba(42, 42, 42, 1);
+    
+// // }
+// // .rubik-400-regular-16px{
+// // font-family: Rubik;
+// // font-weight: 400;
+// // font-style: Regular;
+// // font-size: 16px;
+// // line-height: 100%;
+// // letter-spacing: 0%;
+// // text-align: right;
+// // text-decoration: underline;
+// // text-decoration-style: solid;
+// // text-decoration-thickness: 0%;
+// // text-decoration-skip-ink: auto;
+
+// // }
+// // .rubik-400-regular-10px{
+// // font-family: Rubik;
+// // font-weight: 400;
+// // font-style: Regular;
+// // font-size: 10px;
+// // line-height: 10px;
+// // letter-spacing: 0%;
+// // text-align: right;
+
+// // }
+
+
+
+// // .main-phone-grid{
+// //     display: grid;
+// //     grid-template-columns:1fr;
+// //     background-color: rgb(246, 246, 247);
+   
+// // }
+
+
+// // .phone-return-btn{
+// // width: 56px;
+// // height: 56px;
+// // opacity: 1;
+// // gap: 10px;
+// // border-radius: 12px;
+// // padding: 12px;
+// // background-color: #FFFFFF;
+
+// // }
+// // .phone-main-title-text{
+// // gap: 36px;
+// // width: 125px;
+// // height: 38px;
+// // opacity: 1;
+// // font-family: Rubik;
+// // font-weight: 400;
+// // font-style: Regular;
+// // font-size: 32px;
+// // line-height: 100%;
+// // letter-spacing: 0.95%;
+// // text-align: right;
+
+
+
+// // }
+// // .phone-gird-item{
+// //     display: flex;
+// //     flex-direction: row;
+// //     justify-content: center;
+// //     align-items: center;
+// //     align-content: center;
+// //     overflow-x:auto;
+// //     overflow-y: hidden;
+// //     width: 1141px;
+// //     height: 196px;
+// //     max-width: 1141px;
+// //     padding-bottom: 16px;
+// //     gap: 27px;
+// //     opacity: 1;
+// //     background-color: rgb(247, 247, 247);
+  
+    
+// // }
+// // .desktop-search-row{
+// //     display: flex;
+// //     justify-content: flex-start;
+    
+// // }
+// // .mini-bar{
+// //     display: flex;
+// //     justify-content: space-between;
+// //     align-items: center;
+// // }
+// // .full-user-report-box{
+// //     display: flex;
+// //     justify-content: space-between;
+// //     align-items: center;
+// // }
+// // .phone-stat-card{
+// // width: 265px;
+// // height: 180px;
+// // opacity: 1;
+// // padding-top: 12px;
+// // padding-right: 16px;
+// // padding-bottom: 12px;
+// // padding-left: 16px;
+// // gap: 10px;
+// // border-radius: 12px;
+// // margin: 0;
+// // background-color: #FFFFFF;
+// // display: flex;
+// // flex-direction: column;
+// // justify-content: space-around;
+// // align-items: center;
+
+
+// // }
+// // .phone-stat-card > p{
+// //     margin: 0;
+// //     padding: 0;
+// // }
+// // .filter-wrap{
+// //     display: flex;
+// //     justify-content: flex-end;
+// //     align-items: center;
+// //     width: 358px;
+// //     opacity: 1;
+// //     padding: 0 0 10px 0;
+// //     display: none;
+
+
+// // }
+// // .filter-con{
+// //     width: 56px;
+// //     height: 56px;
+// //     display: flex;
+// //     justify-content: center;
+// //     align-items: center;
+// //     background-color: #FFFFFF;
+// //     border-radius: 12px;
+// //     left: 2px;
+// //     margin: 0;
+// //     padding: 0;
+// //     display: none;
+// // }
+// // .filter-icon{
+// // width: 28px;
+// // height: 26.25px;
+// // top: 15px;
+// // left: 16px;
+// // opacity: 1;
+// // display: none;
+
+
+// // }
+// // .search-box{
+// //     display: flex;
+// //     justify-content: flex-start;
+// //     align-items: center;
+// //     align-content: center;
+// //     width: 358px;
+// //     height: 56px;
+// //     top: 76px;
+// //     left: 2px;
+// //     opacity: 1;
+// //     border-radius: 12px;
+// //     background-color: #FFFFFF;
+// //     margin: 0;
+// //     padding: 0;
+   
+// // }
+// // .search-icon-con{
+// //     display: flex;
+// //     justify-content: center;
+// //     align-items: flex-end;
+// //     display: none;
+
+// // }
+
+// // .search-icon{
+// //     width: 27.999998092651367px;
+// //     height: 27.999998092651367px;
+// //     opacity: 1;
+// //     color: #292929;
     
 
-// }
-// .flex-search-container{
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     justify-items: flex-end;
-//     align-content: flex-end;
-//     width: 1141px;
-//     height: 72px;
-    
-// }
-// .flex-stats-container{
-//     width: 1141px;
-//     height: 196px;
-//     padding: 0 0 16px 0;
-//     gap: 27px;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-// }
-// .user-report-grid-container{
-//     display: grid;
-//     justify-content: center;
-//     align-items: center;
-//     align-self: center;
-//     align-content: center;
-//     gap: 18px;
-
-
-// }
-
-
-// .full-user-report-box{
-//     width: 1141px;
-//     height: 61px;
-//     display: flex;
-//     justify-content:space-evenly;
-//     align-items: center;
-//     border-radius: 12px;
-//     padding: 16px 0 16px 10px;
-//     gap: 18px;
-//     background-color:rgba(255, 255, 255, 1);
-//     width: 1140;
-//     opacity: 1;
-
-// }
-// /* Target iPhone 12 Pro and devices up to ~430px wide */
-// @media only screen and (max-width: 430px) {
-
-// html {
-//     width: 390px;
-//     height: 844px;
-//     border: 1px;
-//     background-color: rgba(247, 247, 247, 1);
+// // }
+// // .search-input{
+// //     width: 128px;
+// //     height: 21px;
+// //     opacity: 1;
+// //     font-family: Rubik;
+// //     font-weight: 400;
+// //     font-style: Regular;
+// //     font-size: 18px;
+// //     line-height: 100%;
+// //     letter-spacing: 0%;
+// //     text-align: right;
+// //     text-transform: capitalize;
+// //     border: none;
     
 
-// }
-// body {
-//     width: 360px;
-//     height: 809px;
-//     opacity: 1;
-//     top: 15px;
-//     left: 15px;
-//     background-color: rgba(247, 247, 247, 1);
 
+// // }
+// // .mid-title{
+// // display: flex;
+// // justify-content: flex-start;
+// // width: 1141px;
+// // height: 38px;
+// // max-width: 1141px;
+// // opacity: 1;
+// // margin: 0;
+// // padding: 0;
+
+
+
+// // }
+// // .user-report-con{
+// // width: 358px;
+// // height: 68px;
+// // top: 244px;
+// // left: -1px;
+// // opacity: 1;
+// // border-radius: 12px;
+// // display: flex;
+// // align-content: flex-start;
+// // justify-items: center;
+// // display: none;
+
+
+// // }
+
+// //     .full-user-report-box{
+// //     width: 1141px;
+// //     height: 61px;
+// //     display: flex;
+// //     justify-content:space-evenly;
+// //     align-items: center;
+// //     border-radius: 12px;
+// //     padding: 16px 0 16px 10px;
+// //     gap: 18px;
+// //     background-color:rgba(255, 255, 255, 1);
+// //     width: 1140;
+// //     opacity: 1;
+
+// // }
+
+
+// // /* ===== Collapsible filter bar ===== */
+// // #filterBar {
+// //   overflow: hidden;
+// //   max-height: 0;                  /* collapsed */
+// //   transition: max-height .25s ease;
+// //   border: 1px solid #e5e7eb;
+// //   border-radius: 12px;
+// //   background: #fff;
+// //   margin-top: 8px;
+// //   width:358px;
+// // }
+// // #filterBar.open { max-height: 60vh; }  /* expanded on click */
+
+// // /* Header */
+// // .filter-head {
+// //   display: flex; justify-content: space-between; align-items: center;
+// //   padding: 8px 12px; border-bottom: 1px solid #f1f5f9;
+// // }
+
+// // /* ===== Filter boxes grid ===== */
+// // #filters { display: grid; grid-template-columns: 1fr; gap: 10px; padding: 12px; }
+// // .filter-box-tag {
+// //   display: flex; align-items: center; gap: 10px;
+// //   border: 1px solid #e5e7eb; border-radius: 10px; 
+// //   background: #fafafa; cursor: pointer; user-select: none;
+// //   width:328px;
+// // }
+
+// // /* The small square that gets a tick when selected */
+// // .filter-box-tag .box-square {
+// //   position: relative; width: 22px; height: 22px;
+// //   border: 1px solid #cbd5e1; border-radius: 6px; box-sizing: border-box;
+// // }
+// // .filter-box-tag .box-square.on {
+// //   background-color: #32324C; border-color: #06b6d4;
+// // }
+// // .filter-box-tag .box-square.on::after {
+// //   content: '✓';
+// //   position: absolute; top: 50%; left: 50%;
+// //   transform: translate(-50%, -50%);
+// //   font-weight: 700; font-size: 14px; color: #ffffff;
+// // }
+
+// // /* One-line, sideways-scrolling tag row */
+// // .appearing-tags {
+// //   display: flex;
+// //   align-items: center;
+// //   flex-wrap: nowrap;          /* stay on one line */
+// //   gap: 6px;                   /* space between tags (optional) */
+// //   overflow-x: auto;           /* enable horizontal scroll */
+// //   overflow-y: hidden;
+// //   white-space: nowrap;        /* prevent line breaks */
+// //   -webkit-overflow-scrolling: touch; /* smooth iOS scroll */
+// //   padding: 0;
+// //   margin: 0;
+// // }
+
+// // .appearing-tags .tag {
+// //   flex: 0 0 auto;             /* do not shrink; keep each tag’s width */
+// //   width: 95px;
+// //   height: 36px;
+// //   background: #DDDDDD;
+// //   border-radius: 8px;
+// //   box-sizing: border-box;
+// //   position: relative;
+// // }
+
+// // .appearing-tags .tag p {
+// //   position: absolute;
+// //   inset: 0;
+// //   display: grid;
+// //   place-items: center;
+// //   margin: 0;
+// //   font-size: 13px;
+// //   font-weight: 500;
+// //   pointer-events: none;
+// // }
+
+// // .appearing-tags .tag button {
+// //   position: absolute;
+// //   top: 50%;
+// //   left: 6px;
+// //   transform: translateY(-50%);
+// //   width: 18px;
+// //   height: 18px;
+// //   border: 0;
+// //   background: transparent;
+// //   cursor: pointer;
+// //   padding: 0;
+// //   font-size: 14px;
+// //   line-height: 1;
+// // }
+// // .appearing-tags .tag p {
+// // width: 57px;
+// // height: 14px;
+// // opacity: 1;
+// // top: 10px;
+// // left: 290.65px;
+// // font-family: Rubik;
+// // font-weight: 400;
+// // font-style: Regular;
+// // font-size: 12px;
+// // line-height: 100%;
+// // letter-spacing: 0%;
+// // color: #292929;
+
+         
+// // }
+
+// // .head-left{
+// //     display: flex;
+// //     align-items: center;
+// // }
+// // .phone-filter-icon{
+// //     width: 28px;
+// //     height: 26.25px;
+// //     opacity: 1;
+// //     top: 20px;
+// //     left: 331px;
+// //     color: #32324C;
+
+
+// // }
+// // .phone-close-filter-con{
+// //     width: 40px;
+// //     height: 40px;
+// //     opacity: 1;
+// //     top: 16px;
+// //     left: 16px;
+// //     border-radius: 20px;
+// //     border: none;
+
+// // }
+// // .phone-close-filter-button > {
+// //     width: 14px;
+// // height: 14px;
+// // opacity: 1;
+// // top: 29px;
+// // left: 29px;
+
+// // }
+// // .first-filter-bar-p{
+// //     margin: 0;
+// //     padding: 0;
+// // }
+// // .second-filter-bar-p{
+// // margin:0;
+// // padding: 0;
+// // }
+
+// // .user-report-row{
+// // width: 358px;
+// // height: 68px;
+// // opacity: 1;
+// // top: 244px;
+// // left: -1px;
+// // border-radius: 12px;
+// // background-color: #FFFFFF;
+// // justify-items: flex-start;
+// // align-items: center;
+// // padding: 0 0 10px 0;
+
+// // }
+// // .first-block-user-report-row{
+// //     display: flex;
+// //     justify-content: flex-start;
+// //     align-items: center;
+// //     padding: 15px 0 0 0;
+// // }
+// // .second-block-user-report-row{
+// //     display: flex;
+// //     justify-content: flex-start;
+// //     align-items: center;
+// // }
+// // .first-p-user-report-con{
+// //     display: flex;
+// //     flex-direction: column;
+// //     justify-content: center;
+// //     margin: 0;
+// //     padding: 0;
+// //     width: 150px;
+// //     height: auto;
+// //     opacity: 1;
+// //     gap: 10px;
+
+// // }
+
+
+
+// // .second-p-user-report-con{
+// //     width: 358px;
+// //     height: 68px;
+// //     opacity: 1;
+// //     border-radius: 6px;
+// //     background-color: #FFFFFF;
+
+// // }
+// // .first-p-user-report-text{
+// //     display: block;
+// //     margin: 0;
+// //     padding: 0;
+// //     justify-self: flex-start;
+
+// // }
+
+// // .first-con-p{
+// // width: auto;
+// // height: 22px;
+// // opacity: 1;
+// // padding-top: 4px;
+// // padding-bottom: 4px;
+// // gap: 2px;
+// // border-radius: 6px;
+// // margin: 0;
+
+
+// // }
+// // .second-con-p{
+// // width: 90px;
+// // height: 22px;
+// // opacity: 1;
+// // padding-top: 4px;
+// // padding-bottom: 4px;
+// // gap: 2px;
+// // border-radius: 6px;
+// // margin: 0;
+
+// // }
+// // .third-con-p{
+// // width: 80px;
+// // height: 22px;
+// // opacity: 1;
+// // border-radius: 6px;
+// // margin: 0;
+// // padding: 0;
+// // gap: 2px;
+
+// // }
+// // .first-p-user-report{
+// // display: flex;
+// // width: 100px;
+// // height: 22px;
+// // opacity: 1;
+// // gap: 2px;
+// // border-radius: 6px;
+// // margin: 0;
+// // padding: 0;
+// // color: #9D9D9D;
+
+// // }
+// // .second-p-user-report{
+// // display: flex;
+// // width: 100px;
+// // height: 22px;
+// // opacity: 1;
+// // padding-top: 4px;
+// // padding-bottom: 4px;
+// // gap: 2px;
+// // border-radius: 6px;
+// // color: #36ADC1;
+// // margin: 0;
+// // padding: 0;
+// // }
+// // .v-icon{
+// //     width: 14px;
+// //     height: 14px;
+// // }
+// // .third-p-user-report{
+// // display: flex;
+// // margin:0;
+// // padding: 0;
+// // width: 53px;
+// // height: 17px;
+// // opacity: 1;
+// // gap: 2px;
+// // justify-self: center;
+// // align-self: center;
+// // color: #36ADC1;
+// // }
+// // //colors
+// // .phone-white-font{
+// //     color: #FFFFFF;
+
+// // }
+// // .blue-bg{
+// //     background-color:#32324C ;
+// // }
+// // //fdgfdg
+// // .underline{
+// //     text-decoration: underline;
+// // }
+
+
+
+
+
+
+
+// // // .grid-container{
+// // //     display: grid;
+// // //     grid-template-rows: repeat(12,1fr);
+// // //     width: 1141px;
+// // //     height: 928px ;
+// // // }
+
+// // // .flex-title-container{
+// // //     width: 1141px;
+// // //     height: 56px;
+// // //     gap: 36px;
+// // //    display: flex;
+// // //    justify-content: space-between;
+// // //    align-items: flex-end;
     
-// }
-// .grid-container{
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     justify-content:baseline;
-//     width: 360px;
-//     height: 809px ;
-//     top: 15px;
-//     left: 15px;
-//     opacity: 1;
+
+// // // }
+
+// // // .flex-search-container{
+// // //     display: flex;
+// // //     justify-content: space-between;
+// // //     align-items: center;
+// // //     justify-items: flex-end;
+// // //     align-content: flex-end;
+// // //     width: 1141px;
+// // //     height: 72px;
+    
+// // // }
+// // // .flex-stats-container{
+// // //     width: 1141px;
+// // //     height: 196px;
+// // //     padding: 0 0 16px 0;
+// // //     gap: 27px;
+// // //     display: flex;
+// // //     flex-direction: row;
+// // //     justify-content: center;
+// // //     align-items: center;
+// // // }
+// // // .user-report-grid-container{
+// // //     display: grid;
+// // //     justify-content: center;
+// // //     align-items: center;
+// // //     align-self: center;
+// // //     align-content: center;
+// // //     gap: 18px;
 
 
-// }
-// .flex-title-container{
-//     width: 360px;
-//     height: 82px;
-//     opacity: 1;
-//     padding-top: 13px;
-//     padding-right: 15px;
-//     padding-bottom: 13px;
-//     padding-left: 15px;
-//     gap: 16px;
-//     display: flex;
-//     justify-content: flex-start;
-//     align-items: center;
+// // // }
+
+
+
+// // // /* Target iPhone 12 Pro and devices up to ~430px wide */
+// // // @media only screen and (max-width: 430px) {
+
+// // // .flex-title-container{
+// // //     width: 360px;
+// // //     height: 82px;
+// // //     opacity: 1;
+// // //     padding-top: 13px;
+// // //     padding-right: 15px;
+// // //     padding-bottom: 13px;
+// // //     padding-left: 15px;
+// // //     gap: 16px;
+// // //     display: flex;
+// // //     justify-content: flex-start;
+// // //     align-items: center;
     
 
-// }
-// .flex-stats-container{
-//     width: 1141px;
-//     height: 196px;
-//     padding: 0 0 16px 0;
-//     gap: 27px;
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: center;
-//     align-items: center;
-//     scrollbar-width:auto;
-// }
-// .filter-box{
-//     width: 56px;
-//     height: 56px;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
+// // // }
+// // // .flex-stats-container{
+// // //     width: 1141px;
+// // //     height: 196px;
+// // //     padding: 0 0 16px 0;
+// // //     gap: 27px;
+// // //     display: flex;
+// // //     flex-direction: row;
+// // //     justify-content: center;
+// // //     align-items: center;
+// // //     scrollbar-width:auto;
+// // // }
+// // // .filter-box{
+// // //     width: 56px;
+// // //     height: 56px;
+// // //     display: flex;
+// // //     justify-content: center;
+// // //     align-items: center;
 
-// }
-// .filter-box p{
-//     width: 1px;
-// }
-// .filter-icon{
-//     display: flex;
-//     justify-content: center;
-//     justify-self: center;
-// }
-// .flex-search-container{
-//     display: flex;
-//     flex-direction: row-reverse;
+// // // }
+// // // .filter-box p{
+// // //     width: 1px;
+// // // }
+// // // .filter-icon{
+// // //     display: flex;
+// // //     justify-content: center;
+// // //     justify-self: center;
+// // // }
+// // // .flex-search-container{
+// // //     display: flex;
+// // //     flex-direction: row-reverse;
 
-// }
-// #block-top {
-//     width: 56px;
-//     height: 56px;
-//   display: flex;
-//   justify-content: flex-end; /* push content to the right */
-//   align-items: center;
-// }
+// // // }
+// // // #block-top {
+// // //     width: 56px;
+// // //     height: 56px;
+// // //   display: flex;
+// // //   justify-content: flex-end; /* push content to the right */
+// // //   align-items: center;
+// // // }
 
-// #block-top > * {
-//   display: flex;
-//   justify-content: flex-end;
-// }
-// #block-bottom{
-// width: 358px;
-// height: 56px;
-// opacity: 1;
-// top: 76px;
-// left: 2px;
-// border-radius: 12px;
+// // // #block-top > * {
+// // //   display: flex;
+// // //   justify-content: flex-end;
+// // // }
+// // // #block-bottom{
+// // // width: 358px;
+// // // height: 56px;
+// // // opacity: 1;
+// // // top: 76px;
+// // // left: 2px;
+// // // border-radius: 12px;
 
-// }
-// .user-report-grid-container{
-//     display: grid;
-//     grid-template-columns: 1fr;
-// }
+// // // }
+// // // .user-report-grid-container{
+// // //     display: grid;
+// // //     grid-template-columns: 1fr;
+// // // }
 
-// }
-
-
-//   .tagbar {
-//     width: 100%;            /* take full width instead of 375px */
-//     height: 100%;           /* fill the screen */
-//     border-radius: 0;       /* remove rounded corners if any */
-//   }
-
-//   .submit-btn {
-//     width: calc(100% - 32px); /* full width minus padding */
-//     margin-left: 16px;
-//   }
-
-//   #appearing-tag {
-//     flex-direction: column;  /* stack title + tags vertically */
-//     align-items: flex-start;
-//     gap: 6px;
-//   }
-
-//   .tag-label {
-//     width: auto;   /* shrink-to-fit */
-//     font-size: 12px;
-//     padding: 0 6px;
-//   }
+// // // }
 
 
+// // //   .tagbar {
+// // //     width: 100%;            /* take full width instead of 375px */
+// // //     height: 100%;           /* fill the screen */
+// // //     border-radius: 0;       /* remove rounded corners if any */
+// // //   }
+
+// // //   .submit-btn {
+// // //     width: calc(100% - 32px); /* full width minus padding */
+// // //     margin-left: 16px;
+// // //   }
+
+// // //   #appearing-tag {
+// // //     flex-direction: column;  /* stack title + tags vertically */
+// // //     align-items: flex-start;
+// // //     gap: 6px;
+// // //   }
+
+// // //   .tag-label {
+// // //     width: auto;   /* shrink-to-fit */
+// // //     font-size: 12px;
+// // //     padding: 0 6px;
+// // //   }
+
+
+// // // }
