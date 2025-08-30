@@ -1,255 +1,272 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/lee/distwo/desktop.css">
-    <link rel="stylesheet" href="/lee/distwo/media-query.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <title>Front End Lee Assignment Kirill kovalevski</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/lee/dist/desktop.css" />
+  <link rel="stylesheet" href="/lee/dist/media-query.css" />
+  <link rel="preconnect" href="/lee/fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet" />
+  <title>Front End Lee Assignment Kirill Kovalevski</title>
 </head>
+
 <body>
-    <div class="main-phone-grid">
-        <div class="phone-header">
-            <button class="phone-return-btn"><img src="/lee/icons/angle-double-left-light.png" alt="return-button"></button>
-            <p class="phone-main-title-text rubik-400-regular-32px">Sheilla</p>
-        </div>
-        <!--Desktop Search that has the searchinput and image and the filter button on the same row-->
-     <!-- DESKTOP: search + filter in one row under the header -->
-<div class="search-filter-desktop">
-  <div class="search-box">
-    <div class="search-icon-con">
-      <img class="search-icon" src="/lee/icons/search-light.png" alt="search-icon">
+  <div class="main-phone-grid">
+    <!-- Header -->
+    <div class="phone-header">
+      <button class="phone-return-btn">
+        <img src="/lee/icons/angle-double-left-light.png" alt="return-button" />
+      </button>
+      <p class="phone-main-title-text rubik-400-regular-32px">Sheilla</p>
     </div>
-    <form action="" method="get" role="search">
-      <input class="search-input rubik-400-regular-18px" type="search" placeholder="חיפוש לפי שם" role="listbox">
-    </form>
-  </div>
 
-  <!-- separate id for desktop button -->
-  <button id="filter-btn-desktop" class="filter-button">
-    <img class="filter-icon" src="/lee/icons/sliders-light (1).png" alt="filter-button">
-  </button>
-</div>
-
-
-        <div class="phone-grid-item">
-            <div class="phone-stat-card stats blue-stat-box blue-bg">
-                <p class="white-font rubik-700-bold-18px phone-white-font">לא הגיעו</p>
-                <p class="phone-stat-card-text rubik-500-medium-36px phone-white-font white-font">4</p>
-                <p class="phone-stat-card-text rubik-700-bold-18px phone-white-font white-font">ב-7 הימים האחרונים</p>
-            </div>
-            <div class="phone-stat-card">
-                <p class="phone-stat-card-text rubik-400-regular-18px"> מתוכם</p>
-                <p class="phone-stat-card-text rubik-500-medium-36px">2</p>
-                <p class="phone-stat-card-text rubik-700-bold-18px "> לא נרשמו כלל</p>
-            </div>
-            <div class="phone-stat-card">
-                <p class="phone-stat-card-text rubik-400-regular-18px"> מתוכם</p>
-                <p class="phone-stat-card-text rubik-500-medium-36px">2</p>
-                <p class="phone-stat-card-text rubik-700-bold-18px "> לא נרשמו כלל</p>
-            </div>
-            <div class="phone-stat-card">
-                <p class="phone-stat-card-text rubik-400-regular-18px"> מתוכם</p>
-                <p class="phone-stat-card-text rubik-500-medium-36px">2</p>
-                <p class="phone-stat-card-text rubik-700-bold-18px "> לא נרשמו כלל</p>
-            </div>
+    <!-- DESKTOP: search + filter in one row under the header -->
+    <div class="search-filter-desktop">
+      <div class="search-box">
+        <div class="search-icon-con">
+          <img class="search-icon" src="/lee/icons/search-light.png" alt="search-icon" />
         </div>
-        <!--filter stuff-->
-        <div class="filter-wrap">
-            <div class="filter-con">
-                <button id="filter-btn filter-btn-desktop" class="btn-filter">
-                    <img class="filter-icon" src="/lee/icons/sliders-light (1).png" alt="filter-button">
-                </button>
-            </div>
-        </div>
-        <div class="filter-bar-wrap">
-  <div class="filter-bar" id="filterBar">
-    <div class="filter-scroll">
-      <div class="filter-head">
-        <div class="head-left">
-           <img class="phone-filter-icon" src="/lee/icons/sliders-light (1).png" alt="">
-          <p class="rubik-700-bold-24px">סינון תוצאות</p>
-        </div>
-        <div class="head-right">
-            <button id="closeBar" class="phone-close-filter-con" aria-label="Close filters">✕</button>
-         
-        </div>
+        <form action="" method="get" role="search">
+          <input class="search-input rubik-400-regular-18px" type="search" placeholder="חיפוש לפי שם" role="listbox" />
+        </form>
       </div>
 
-      <!-- 6 filter boxes: note class and data-name values -->
-      <div class="filters" id="filters">
-        <div class="filter-box-tag" data-name="תגית פילטר ">
-          <div class="box-square"></div><div class="label">
-            <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 1</p>
-            <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+      <!-- DESKTOP opener ONLY (CSS shows on ≥431px) -->
+      <button id="filter-btn-desktop" class="filter-button" type="button" aria-controls="filterBar" aria-expanded="false">
+        <img class="filter-icon-desktop" src="/lee/icons/sliders-light (1).png" alt="filter-button" />
+        <p class="filter-text-desktop rubik-400-regular-18px">סינון</p>
+      </button>
+    </div>
+
+    <!-- Stats row -->
+    <div class="phone-grid-item">
+      <div class="phone-stat-card stats blue-stat-box blue-bg">
+        <p class="white-font rubik-700-bold-18px phone-white-font">לא הגיעו</p>
+        <p class="phone-stat-card-text rubik-500-medium-36px phone-white-font white-font">4</p>
+        <p class="phone-stat-card-text rubik-700-bold-18px phone-white-font white-font">ב-7 הימים האחרונים</p>
+      </div>
+      <div class="phone-stat-card">
+        <p class="phone-stat-card-text rubik-400-regular-18px"> מתוכם</p>
+        <p class="phone-stat-card-text rubik-500-medium-36px">2</p>
+        <p class="phone-stat-card-text rubik-700-bold-18px "> לא נרשמו כלל</p>
+      </div>
+      <div class="phone-stat-card">
+        <p class="phone-stat-card-text rubik-400-regular-18px"> מתוכם</p>
+        <p class="phone-stat-card-text rubik-500-medium-36px">2</p>
+        <p class="phone-stat-card-text rubik-700-bold-18px "> לא נרשמו כלל</p>
+      </div>
+      <div class="phone-stat-card">
+        <p class="phone-stat-card-text rubik-400-regular-18px"> מתוכם</p>
+        <p class="phone-stat-card-text rubik-500-medium-36px">2</p>
+        <p class="phone-stat-card-text rubik-700-bold-18px "> לא נרשמו כלל</p>
+      </div>
+    </div>
+
+    <!-- PHONE opener ONLY (CSS shows on ≤430px) -->
+    <div class="filter-wrap">
+      <div class="filter-con">
+        <button id="filter-btn" class="btn-filter" type="button" aria-controls="filterBar" aria-expanded="false">
+          <img class="filter-icon" src="/lee/icons/sliders-light (1).png" alt="filter-button" />
+        </button>
+      </div>
+    </div>
+
+    <!-- Filter panel (shared markup; CSS changes behavior per viewport) -->
+    <div class="filter-bar-wrap">
+      <div class="filter-bar" id="filterBar" role="region" aria-label="סינון תוצאות">
+        <div class="filter-scroll">
+          <div class="filter-head">
+            <div class="head-left">
+              <img class="phone-filter-icon" src="/lee/icons/sliders-light (1).png" alt="" />
+              <p class="rubik-700-bold-24px">סינון תוצאות</p>
+            </div>
+            <div class="head-right">
+              <button id="closeBar" class="phone-close-filter-con" type="button" aria-label="סגירת סינון"><img class="phone-close-filter-img" src="/lee/icons/X.png" alt=""></button>
+            </div>
           </div>
-        </div>
-        <div class="filter-box-tag" data-name="תגית פילטר">
-          <div class="box-square"></div><div class="label">
-            <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 2</p>
-            <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+
+          <!-- Boxes -->
+          <div class="filters" id="filters">
+            <div class="filter-box-tag" data-name="תגית לדוגמה 1">
+              <div class="box-square"></div>
+              <div class="label">
+                <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 1</p>
+                <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+              </div>
+            </div>
+
+            <div class="filter-box-tag" data-name="תגית לדוגמה 2">
+              <div class="box-square"></div>
+              <div class="label">
+                <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 2</p>
+                <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+              </div>
+            </div>
+
+            <div class="filter-box-tag" data-name="תגית לדוגמה 3">
+              <div class="box-square"></div>
+              <div class="label">
+                <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 3</p>
+                <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+              </div>
+            </div>
+
+            <div class="filter-box-tag" data-name="תגית לדוגמה 4">
+              <div class="box-square"></div>
+              <div class="label">
+                <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 4</p>
+                <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+              </div>
+            </div>
+
+            <div class="filter-box-tag" data-name="תגית לדוגמה 5">
+              <div class="box-square"></div>
+              <div class="label">
+                <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 5</p>
+                <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+              </div>
+            </div>
+
+            <div class="filter-box-tag" data-name="תגית לדוגמה 6">
+              <div class="box-square"></div>
+              <div class="label">
+                <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 6</p>
+                <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="filter-box-tag" data-name="תגית פילטר">
-          <div class="box-square"></div><div class="label">
-            <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 3</p>
-            <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
-          </div>
-        </div>
-        <div class="filter-box-tag" data-name="תגית פילטר">
-          <div class="box-square"></div><div class="label">
-            <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 4</p>
-            <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
-          </div>
-        </div>
-        <div class="filter-box-tag" data-name="תגית פילטר">
-          <div class="box-square"></div><div class="label">
-            <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 5</p>
-            <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
-          </div>
-        </div>
-        <div class="filter-box-tag" data-name="תגית פילטר">
-          <div class="box-square"></div><div class="label">
-            <p class="first-filter-bar-p rubik-600-semiBold-18px">תגית לדוגמה 6</p>
-            <p class="second-filter-bar-p rubik-400-regular-10px">הוספת תגית לדוח</p>
+
+          <!-- Bottom full-width button -->
+          <div class="filter-bottom">
+            <button type="button" class="apply-btn white-font"><p>הצגת תוצאות</p></button>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-        <!--Search Stuff-->
-        <div class="search-box">
-            <div class="search-icon-con"><img class="search-icon" src="/lee/icons/search-light.png" alt="search-icon">
-            </div>
-            <form action="" method="get" role="search">
-                <input class="search-input rubik-400-regular-18px" type="search" placeholder="חיפוש לפי שם" role="listbox">
-                
-            </form>
-        </div>
-        <!--Midtitle-->
+    <!-- (Optional) extra search box for phone if you really need it elsewhere; otherwise you can remove this -->
+    <div class="search-box">
+      <div class="search-icon-con">
+        <img class="search-icon" src="/lee/icons/search-light.png" alt="search-icon" />
+      </div>
+      <form action="" method="get" role="search">
+        <input class="search-input rubik-400-regular-18px" type="search" placeholder="חיפוש לפי שם" role="listbox" />
+      </form>
+    </div>
+
+    <!-- Title + tags -->
     <div class="title-line">
-            <div class="mid-title rubik-400-regular-32px">כותרת</div>
-            <div class="appearing-tags" aria-live="polite"></div>
-    </div>
-        <!--User report desktop-->
-        <div class="mini-bar">
-                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-one">שם הלקוח <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
-                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-two"> נראה לאחרונה <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
-                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-three ">שיבוץ עתידי <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
-                    <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-four">מנוי <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up"></p>
-                </div>
-                <!--This is where the mock JSON shows-->
-                <div id="results-area rubik-400-regular-18px" class="is-hidden"></div>
-                <div class="cards is-hidden rubik-400-regular-18px is-hidden"></div>
-                <!--User stats-->
-                <div class="full-user-report-box search-block-one" data-important="yes">
-                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
-                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
-                <div class="double-p">
-                    <p class=" rubik-400-regular-18px">23/06</p>
-                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
-                    </div>
-                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
-                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
-                </div>
-                <div class="full-user-report-box search-block-one" data-important="yes">
-                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 2</p>
-                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
-                <div class="double-p">
-                    <p class=" rubik-400-regular-18px">23/06</p>
-                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
-                </div>
-                        <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
-                        <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
-                </div>
-                <div class="full-user-report-box search-block-one" data-important="yes">
-                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 3</p>
-    
-                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
-                    <div class="double-p">
-                    <p class=" rubik-400-regular-18px">23/06</p>
-                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
-                    </div>
-                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
-                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
-                </div>
-                <div class="full-user-report-box search-block-one" data-important="yes">
-                    <p class=" grid-item rubik-400-regular-18px underline">ישראל ישראלי 4</p>
-    
-                    <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
-                    <div class="double-p">
-                    <p class=" rubik-400-regular-18px">23/06</p>
-                    <p class="grid-item  rubik-400-regular-14px grey-grid-box">12:30</p>
-                    </div>
-                    <p class=" sky-blue-grid-box  sky-font-color"> <img src="/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt=""> 23/10</p>
-                      <p class="grid-item sky-blue-grid-box  sky-font-color"> מנוי פעיל</p>
-                </div>
-            </div>
-    <!--User report-->
-       <div class="user-report-con">
-        <div class="user-report-row">
-            <div class="first-block-user-report-row">
-                <p class="first-p-user-report-text underline rubik-400-regular-16px">שםלקוח ארוךמאד</p>
-            </div>
-            <div class="second-block-user-report-row">
-                <div class="first-con-p">
-                    <p class="rubik-400-regular-14px first-p-user-report">אחרון 12\07\25</p>
-               </div>
-                <div class="second-con-p">
-                     <p class="rubik-400-regular-14px second-p-user-report"><img class="v-icon" src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="">עתידי 23\10</p>
-                </div>
-                <div class="third-con-p">
-                    <p class="rubik-400-regular-14px third-p-user-report">מנוי פעיל</p>
-                </div>
-            </div>
-            <div class="user-report-row">
-            <div class="first-block-user-report-row">
-                <p class="first-p-user-report-text underline rubik-400-regular-16px">שםלקוח ארוךמאד</p>
-            </div>
-            <div class="second-block-user-report-row">
-                <div class="first-con-p">
-                    <p class="rubik-400-regular-14px first-p-user-report">אחרון 12\07\25</p>
-               </div>
-                <div class="second-con-p">
-                     <p class="rubik-400-regular-14px second-p-user-report"><img class="v-icon" src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="">עתידי 23\10</p>
-                </div>
-                <div class="third-con-p">
-                    <p class="rubik-400-regular-14px third-p-user-report">מנוי פעיל</p>
-                </div>
-            </div>
-            <div class="user-report-row">
-            <div class="first-block-user-report-row">
-                <p class="first-p-user-report-text underline rubik-400-regular-16px">שםלקוח ארוךמאד</p>
-            </div>
-            <div class="second-block-user-report-row">
-                <div class="first-con-p">
-                    <p class="rubik-400-regular-14px first-p-user-report">אחרון 12\07\25</p>
-               </div>
-                <div class="second-con-p">
-                     <p class="rubik-400-regular-14px second-p-user-report"><img class="v-icon" src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="">עתידי 23\10</p>
-                </div>
-                <div class="third-con-p">
-                    <p class="rubik-400-regular-14px third-p-user-report">מנוי פעיל</p>
-                </div>
-            </div>
-            </div>
-        </div>
-            
-                
-            
-                
-                
-       </div>
+      <div class="mid-title rubik-400-regular-32px">כותרת</div>
+      <div class="appearing-tags" aria-live="polite"></div>
     </div>
 
-    
-    <script src="/lee/distwo/desktop.css" defer></script>
-    <script src="/lee/distwo/filters.dev.js" defer></script>
-    <script src="/lee/distwo/media-query.css" defer></script>
+    <!-- Desktop mini-bar + rows -->
+    <div class="mini-bar">
+      <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-one">שם הלקוח
+        <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up" /></p>
+      <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-two">נראה לאחרונה
+        <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up" /></p>
+      <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-three">שיבוץ עתידי
+        <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up" /></p>
+      <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-four">מנוי
+        <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up" /></p>
+    </div>
+
+    <!-- Example rows -->
+    <div class="full-user-report-box search-block-one" data-important="yes">
+      <p class="grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
+      <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
+      <div class="double-p">
+        <p class="rubik-400-regular-18px">23/06</p>
+        <p class="grid-item rubik-400-regular-14px grey-grid-box">12:30</p>
+      </div>
+      <p class="sky-blue-grid-box sky-font-color"><img src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="V" /> 23/10</p>
+      <p class="grid-item sky-blue-grid-box sky-font-color">ללא מנוי</p>
+    </div>
+
+    <div class="full-user-report-box search-block-one" data-important="yes">
+      <p class="grid-item rubik-400-regular-18px underline">ישראל ישראלי 2</p>
+      <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
+      <div class="double-p lelo-box">
+        <p class="rubik-400-regular-18px">23/06</p>
+        <p class="grid-item rubik-400-regular-14px grey-grid-box">12:30</p>
+      </div>
+      <p class="sky-blue-grid-box"><img src="/lee/icons/page_table_line_cell_future_tag-icon_type-no.png" alt="" />ללא</p>
+      <p class="grid-item sky-blue-grid-box sky-font-color">מנוי פעיל</p>
+    </div>
+
+    <div class="full-user-report-box search-block-one" data-important="yes">
+      <p class="grid-item rubik-400-regular-18px underline">ישראל ישראלי 3</p>
+      <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
+      <div class="double-p">
+        <p class="rubik-400-regular-18px">23/06</p>
+        <p class="grid-item rubik-400-regular-14px grey-grid-box">12:30</p>
+      </div>
+      <div class="lelo-box">
+        <p class="rubik-400-regular-14px">ללא</p>
+        <img class="x-icon" src="/lee/icons/page_table_line_cell_future_tag-icon_type-no.png" alt="X" />
+      </div>
+      <p class="grid-item sky-blue-grid-box sky-font-color">מנוי פעיל</p>
+    </div>
+
+    <div class="full-user-report-box search-block-one" data-important="yes">
+      <p class="grid-item rubik-400-regular-18px underline">ישראל ישראלי 4</p>
+      <p class="grid-item rubik-400-regular-18px">שם השיעור האחרון</p>
+      <div class="double-p">
+        <p class="rubik-400-regular-18px">23/06</p>
+        <p class="grid-item rubik-400-regular-14px grey-grid-box">12:30</p>
+      </div>
+      <p class="sky-blue-grid-box sky-font-color"><img src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="" /> 23/10</p>
+      <p class="grid-item sky-blue-grid-box sky-font-color">ללא מנוי</p>
+    </div>
+
+    <!-- Phone list (shown only on phone via CSS) -->
+     <div class="user-report-wrap">
+    <div class="user-report-con">
+      <div class="user-report-row">
+        <div class="first-block-user-report-row">
+          <p class="first-p-user-report-text underline rubik-400-regular-16px">שםלקוח ארוךמאד</p>
+        </div>
+        <div class="second-block-user-report-row">
+          <div class="first-con-p"><p class="rubik-400-regular-14px first-p-user-report"><p class="rubik-400-regular-14px first-p-user-report">אחרון</p> 12\07\25</p></div>
+          <div class="second-con-p"><p class="rubik-400-regular-14px second-p-user-report"><img class="v-icon" src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="">עתידי 23\10</p></div>
+          <div class="third-con-p"><p class="rubik-400-regular-14px third-p-user-report">מנוי פעיל</p></div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+   <div class="user-report-con">
+      <div class="user-report-row">
+        <div class="first-block-user-report-row">
+          <p class="first-p-user-report-text underline rubik-400-regular-16px">שםלקוח ארוךמאד</p>
+        </div>
+        <div class="second-block-user-report-row">
+          <div class="first-con-p"><p class="rubik-400-regular-14px first-p-user-report"><p class="rubik-400-regular-14px first-p-user-report">אחרון</p> 12\07\25</p></div>
+          <div class="second-con-p"><p class="rubik-400-regular-14px second-p-user-report"><img class="v-icon" src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="">עתידי 23\10</p></div>
+          <div class="third-con-p"><p class="rubik-400-regular-14px third-p-user-report">מנוי פעיל</p></div>
+        </div>
+        
+      </div>
+    </div>
+     <div class="user-report-con">
+      <div class="user-report-row">
+        <div class="first-block-user-report-row">
+          <p class="first-p-user-report-text underline rubik-400-regular-16px">שםלקוח ארוךמאד</p>
+        </div>
+        <div class="second-block-user-report-row">
+          <div class="first-con-p"><p class="rubik-400-regular-14px first-p-user-report"><p class="rubik-400-regular-14px first-p-user-report">אחרון</p> 12\07\25</p></div>
+          <div class="second-con-p"><p class="rubik-400-regular-14px second-p-user-report"><img class="v-icon" src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="">עתידי 23\10</p></div>
+          <div class="third-con-p"><p class="rubik-400-regular-14px third-p-user-report">מנוי פעיל</p></div>
+        </div>
+        
+      </div>
+    </div>
+    </div>
+  
+  
+
+  <script src="/lee/filter.js" defer></script>
 </body>
 </html>
