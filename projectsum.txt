@@ -1,0 +1,100 @@
+README - Front End Lee Assignment
+=================================
+
+📌 Project Overview
+-------------------
+This project is a Front-End assignment built with HTML, CSS, and JavaScript to demonstrate responsive layouts, filtering functionality, and live search with mock data.
+
+- Responsive design: Layout adapts between desktop (≥431px) and phone (≤430px) views.
+- Filter bar: Available in both desktop (right-side drawer) and phone (collapsible under the filter button) with dynamically added/removable tags.
+- Search functionality: Live search updates the report table based on client names. Uses mock JSON files to simulate backend data.
+
+📂 Project Structure
+--------------------
+lee/
+│── dist/                # Compiled CSS files (desktop.css, media-query.css)
+│── icons/               # All icon images used in the project
+│── mock/                # Mock JSON data simulating backend responses
+│   └── clients.json     # Example client data (name, last class, next class, subscription)
+│── filter.js            # Handles filter bar open/close & tag management
+│── search.js            # Handles live search and rendering results
+│── index.html           # Main HTML file
+
+⚙️ Installation & Running Instructions
+--------------------------------------
+1. Clone or download the project folder.
+
+   git clone <repo-url>
+   cd lee
+
+2. Project files are plain HTML/CSS/JS, so no build step is required.
+   You can open index.html directly in a browser, but for JSON fetches to work you need a local web server.
+
+   Option A — Using VSCode Live Server
+   - Install the Live Server extension in VSCode.
+   - Right-click index.html → Open with Live Server.
+   - The project will be available at http://localhost:5500/lee/index.html
+
+   Option B — Using Node.js HTTP server
+   npm install -g serve
+   serve .
+
+   Visit the link printed in your terminal (usually http://localhost:3000).
+
+3. Open the app in your browser.
+   - Desktop view: resize width ≥ 431px
+   - Phone view: resize width ≤ 430px
+
+📊 Mock Files Explanation
+-------------------------
+The /mock folder simulates server responses so the project works without a backend.
+
+clients.json
+------------
+Represents the client report data. Example:
+
+[
+  {
+    "name": "ישראל ישראלי 1",
+    "lastClass": {
+      "name": "יוגה מתקדמים",
+      "date": "2025-06-23",
+      "time": "12:30"
+    },
+    "nextClassDate": "2025-10-23",
+    "subscription": "ללא מנוי"
+  },
+  {
+    "name": "ישראל ישראלי 2",
+    "lastClass": {
+      "name": "פילאטיס בסיסי",
+      "date": "2025-06-20",
+      "time": "09:00"
+    },
+    "nextClassDate": null,
+    "subscription": "מנוי פעיל"
+  }
+]
+
+Fields:
+- name: Client’s full name (used by the search bar).
+- lastClass: Object with:
+  - name – class title
+  - date – last class date (YYYY-MM-DD)
+  - time – last class start hour
+- nextClassDate: Next scheduled class date (nullable if none).
+- subscription: Client’s subscription status ("מנוי פעיל", "ללא מנוי", "מנוי בארכיון").
+
+Purpose:
+- Provides consistent data for live search filtering.
+- Used by search.js to dynamically populate results into the report table.
+- Simulates how the frontend would request and render data from an API.
+
+🚀 Features Recap
+-----------------
+- Responsive layout (desktop vs phone)
+- Dynamic filter bar with selectable tags
+- Search bar:
+  - Shows results only when typing
+  - Replaces static rows with JSON data
+  - Supports both desktop and phone views

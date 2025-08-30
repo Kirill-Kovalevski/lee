@@ -75,11 +75,131 @@
   }
 
   /* ===== Phone-only visibility for lists ===== */
-  .user-report-row{display:block;width:358px;height:68px;border-radius:12px;background:#fff;padding:0 0 10px}
-  .full-user-report-box,.mini-bar,.main-desktop-grid{display:none}
+  .user-report-row{display:flex;flex-direction: column; justify-content: flex-start; width:358px;height:68px;border-radius:12px;background:#fff;padding:0 0 10px}
+  .full-user-report-box,.mini-bar,.main-desktop-grid{display:none};
+  .user-report-row{
+width: 358px;
+height: 68px;
+opacity: 1;
+top: 244px;
+left: -1px;
+border-radius: 12px;
 
+
+  }
+  .first-p-user-report-text{
+margin: 0;
+
+
+  }
+  .first-block-user-report-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   width: 150px;
+height: 24px;
+opacity: 1;
+gap: 10px
+
+  }
+  .first-con-p{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .first-p-user-report{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .second-block-user-report-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 257px;
+height: 22px;
+opacity: 1;
+gap: 4px;
+
+  }
+.second-con-p{
+width: 90px;
+height: 22px;
+opacity: 1;
+padding-top: 4px;
+padding-bottom: 4px;
+gap: 2px;
+border-radius: 6px;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+
+}
+.second-con-p > p{
+    margin: 0;
+}
+.second-p-user-report{
+color: #36ADC1
+}
+.third-con-p{
+width: 65px;
+height: 22px;
+opacity: 1;
+border-radius: 6px;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+
+}
+.v-icon{
+    width: 14px;
+height: 14px;
+opacity: 1;
+color: #36ADC1;
+
+}
   /* ===== Utilities ===== */
   .phone-white-font{color:#fff}
   .blue-bg{background:#32324C}
   .underline{text-decoration:underline}
 }
+/* PHONE ONLY: show the standalone search */
+@media (max-width:430px){
+  .main-phone-grid > .search-box { display:flex !important; }
+}
+
+/* DESKTOP ONLY: hide the standalone search */
+@media (min-width:431px){
+  .main-phone-grid > .search-box { display:none !important; }
+}
+/* PHONE: tags under the title */
+@media (max-width:430px){
+  .title-line {
+    display: flex;
+    flex-direction: column;   /* stack vertically */
+    align-items: flex-start;  /* align to right/rtl start */
+    gap: 6px;
+  }
+  .title-line .appearing-tags {
+    display: flex;
+    flex-wrap: wrap;          /* allow multiple rows if needed */
+    gap: 6px;
+    width: 100%;
+  }
+}
+.is-hidden { display: none !important; }
+/* Hide .full-user-report-box on phone view */
+@media (max-width: 430px) {
+  .full-user-report-box {
+    display: none !important;
+  }
+}
+/* show the dynamic results on phone even though full-user-report-box is hidden there */
+#resultsArea .full-user-report-box { 
+  display: flex !important;         /* same layout as desktop rows */
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+

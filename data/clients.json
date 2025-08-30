@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "דנה כהן",
+    "lastClass": { "name": "פילאטיס מכשירים", "startDate": "2025-07-23", "startHour": "12:30" },
+    "nextClassDate": "2025-10-23",
+    "subscription": "archived"
+  },
+  {
+    "id": 2,
+    "name": "דור מזרחי ",
+    "lastClass": { "name": "יוגה ערב", "startDate": "2025-07-21", "startHour": "18:00" },
+    "nextClassDate": null,
+    "subscription": "active"
+  },
+  {
+    "id": 3,
+    "name": "ישראל ישראלי ",
+    "lastClass": { "name": "HIIT בוקר", "startDate": "2025-07-20", "startHour": "07:45" },
+    "nextClassDate": "2025-08-15",
+    "subscription": "active"
+  },
+  {
+    "id": 4,
+    "name": "משה גולן",
+    "lastClass": { "name": "מתיחות", "startDate": "2025-07-19", "startHour": "09:15" },
+    "nextClassDate": "2025-09-01",
+    "subscription": "archived"
+  },
+  {
+    "id": 5,
+    "name": "נועם לוי",
+    "lastClass": { "name": "פילאטיס מזרן", "startDate": "2025-07-22", "startHour": "10:00" },
+    "nextClassDate": null,
+    "subscription": "active"
+  },
+  {
+    "id": 6,
+    "name": "דנה בר",
+    "lastClass": { "name": "קיקבוקס", "startDate": "2025-07-18", "startHour": "19:30" },
+    "nextClassDate": "2025-08-10",
+    "subscription": "archived"
+  }
+]

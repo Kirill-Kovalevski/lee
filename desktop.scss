@@ -12,6 +12,7 @@
 .rubik-400-regular-16px{font-family:Rubik;font-weight:400;font-size:16px;line-height:100%;text-align:right;text-decoration:underline}
 .rubik-400-regular-10px{font-family:Rubik;font-weight:400;font-size:10px;line-height:10px;text-align:right}
 
+
 /* ===== Page ===== */
 html{width:1920px;height:1080px;display:flex;align-content:center;justify-content:center;margin:0;overflow-x:hidden}
 body{width:1141px;height:928px;padding-top:100px;gap:33px;background:#F7F7F7;margin:0;overflow-x:hidden}
@@ -48,7 +49,7 @@ body{width:1141px;height:928px;padding-top:100px;gap:33px;background:#F7F7F7;mar
 .mini-bar-item-four{width:165px;height:29px;padding-right:10px;gap:10px;display:flex;justify-self:flex-start;align-self:flex-start}
 
 .full-user-report-box{width:1141px;height:61px;max-width:1141px;padding:16px 0 16px 10px;gap:18px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}
-.double-p{display:flex}
+.double-p{display:flex; justify-content: center; align-items: center;}
 .user-report-con{display: block; justify-content: flex-start;align-items: center;}
 .user-report-row{display:none}
 
@@ -99,8 +100,30 @@ background-color: #ff0000;
 .sky-font-color{color:#36ADC1;font-family:'Rubik',sans-serif;font-weight:400;font-size:18px;line-height:100%;letter-spacing:.95%}
 .grey-grid-box{display:flex;justify-content:center;align-items:center;width:70px;height:29px;border-radius:6px;padding:4px 6px;gap:10px;background:rgba(42,42,42,.05)}
 .underline{text-decoration:underline}
+.grey-text{color: #959595;}
 
 /* ===== Filter header bits ===== */
 .filter-head{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid #f1f5f9}
-.lelo-box{width:70px;height:29px;padding:4px 6px;gap:10px;border-radius:6px;background:#c615150d;display:flex;flex-direction:row-reverse}
+.lelo-box{width:70px;height:29px;padding:4px 6px;gap:10px;border-radius:6px;background:#c615150d;display:flex;flex-direction:row-reverse; justify-content: center; align-items: center;}
 .x-icon{width:18px;height:18px;color:#707070}
+/* DESKTOP: tags inline next to the title */
+@media (min-width:431px){כ
+  .title-line {
+    display: flex;
+    flex-direction: row;      /* inline */
+    align-items: center;
+    gap: 10px;
+  }
+  .title-line .appearing-tags {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+.is-hidden { display: none !important; }
+/* Show them again on desktop */
+@media (min-width: 431px) {
+  .full-user-report-box {
+    display: flex !important;   /* or whatever your normal layout is */
+  }
+}

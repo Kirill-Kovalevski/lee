@@ -342,6 +342,8 @@ body {
 
 .double-p {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .user-report-con {
@@ -585,6 +587,10 @@ body {
   text-decoration: underline;
 }
 
+.grey-text {
+  color: #959595;
+}
+
 /* ===== Filter header bits ===== */
 .filter-head {
   display: flex;
@@ -603,10 +609,40 @@ body {
   background: #c615150d;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
 }
 
 .x-icon {
   width: 18px;
   height: 18px;
   color: #707070;
+}
+
+/* DESKTOP: tags inline next to the title */
+@media (min-width: 431px) {
+  כ .title-line {
+    display: flex;
+    flex-direction: row;
+    /* inline */
+    align-items: center;
+    gap: 10px;
+  }
+
+  .title-line .appearing-tags {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+}
+.is-hidden {
+  display: none !important;
+}
+
+/* Show them again on desktop */
+@media (min-width: 431px) {
+  .full-user-report-box {
+    display: flex !important;
+    /* or whatever your normal layout is */
+  }
 }
