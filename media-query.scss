@@ -41,7 +41,9 @@
   }
   #filterBar.open{max-height:60vh}
   #filterBar .filter-scroll{display:flex;flex-direction:column;max-height:60vh;overflow-y:auto;-webkit-overflow-scrolling:touch}
-  .filter-head{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;border-bottom:1px solid #f1f5f9}
+  .filter-head{display:flex;justify-content:space-between;align-items:center;}
+  .head-left{display: flex; align-items: center;}
+  git add
 
   /* Filter boxes */
   #filters{display:grid;grid-template-columns:1fr;gap:10px;padding:12px}

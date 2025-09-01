@@ -600,6 +600,20 @@ body {
   border-bottom: 1px solid #f1f5f9;
 }
 
+.head-left {
+  display: flex;
+  align-items: center;
+}
+
+.phone-close-filter-con {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  opacity: 1;
+  top: 16px;
+  left: 16px;
+}
+
 .lelo-box {
   width: 70px;
   height: 29px;
