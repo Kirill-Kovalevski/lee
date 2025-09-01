@@ -102,15 +102,14 @@
   .phone-grid-item {
     display: flex;
     gap: 27px;
-    width: 1141px;
-    height: 196px;
-    max-width: 1141px;
+    width: 100%;
+    max-width: none;
     overflow-x: auto;
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
-    background: #f7f7f7;
-    padding-bottom: 16px;
     scroll-snap-type: x mandatory;
+    padding-bottom: 16px;
+    background: #f7f7f7;
   }
 
   .phone-grid-item > * {
@@ -118,329 +117,324 @@
   }
 
   .phone-stat-card {
-    width: 265px;
+    flex: 0 0 265px;
     height: 180px;
     border-radius: 12px;
     background: #fff;
-    padding: 12px 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0;
-  }
-
-  .phone-stat-card > p {
-    margin: 0;
-  }
-
-  /* ===== Collapsible filter panel under button ===== */
-  .filter-bar-wrap {
-    position: static;
-    width: auto;
-    height: auto;
-    display: block;
-  }
-
-  #filterBar {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.25s ease;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    background: #fff;
-    margin-top: 8px;
-    width: 358px;
-  }
-
-  #filterBar.open {
-    max-height: 60vh;
-  }
-
-  #filterBar .filter-scroll {
-    display: flex;
-    flex-direction: column;
-    max-height: 60vh;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .filter-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .head-left {
-    display: flex;
-    align-items: center;
-  }
-
-  git add #filters {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    padding: 12px;
-  }
-
-  .filter-box-tag {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    background: #fafafa;
-    cursor: pointer;
-    user-select: none;
-    width: 328px;
-  }
-
-  .filter-box-tag .box-square {
-    position: relative;
-    width: 22px;
-    height: 22px;
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    background: #fff;
-  }
-
-  .filter-box-tag .box-square.on {
-    background: #32324C;
-    border-color: #06b6d4;
-  }
-
-  .filter-box-tag .box-square.on::after {
-    content: "✓";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-weight: 700;
-    font-size: 14px;
-    color: #fff;
-  }
-
-  /* ===== Tags inline next to the title ===== */
-  .title-line {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .appearing-tags {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
-    padding: 0;
-    margin: 0;
-  }
-
-  .appearing-tags .tag {
-    position: relative;
-    flex: 0 0 auto;
-    width: 95px;
-    height: 36px;
-    background: #DDDDDD;
-    border-radius: 8px;
-    padding-inline-start: 22px;
-  }
-
-  .appearing-tags .tag p {
-    position: absolute;
-    inset: 0;
-    display: grid;
-    place-items: center;
-    margin: 0;
-    font-size: 12px;
-    font-weight: 500;
-    color: #292929;
-    line-height: 1;
-    padding: 0 8px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .appearing-tags .tag button {
-    position: absolute;
-    top: 50%;
-    left: 6px;
-    transform: translateY(-50%);
-    width: 18px;
-    height: 18px;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 1;
-  }
-
-  /* ===== Phone-only visibility for lists ===== */
-  .user-report-wrap {
-    display: flex;
-    align-content: center;
-  }
-
-  .user-report-con {
-    display: flex;
-    align-content: center;
-    justify-items: center;
-  }
-
-  .user-report-row {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    width: 358px;
-    height: 68px;
-    border-radius: 12px;
-    background: #fff;
-    padding: 0 0 10px;
-  }
-
-  .full-user-report-box, .mini-bar, .main-desktop-grid {
-    display: none;
-  }
-
-  .user-report-row {
-    width: 358px;
-    height: 68px;
-    opacity: 1;
-    top: 244px;
-    left: -1px;
-    border-radius: 12px;
-    margin: 0;
-  }
-
-  .first-p-user-report-text {
-    margin: 0;
-  }
-
-  .first-block-user-report-row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 150px;
-    height: 24px;
-    opacity: 1;
-    gap: 10px;
-  }
-
-  .first-con-p {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    width: 94px;
-    height: 22px;
-    opacity: 1;
-    border-radius: 6px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    gap: 2px;
-  }
-
-  .first-p-user-report {
-    margin: 0;
-  }
-
-  .second-block-user-report-row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 257px;
-    height: 22px;
-    opacity: 1;
-    gap: 4px;
-  }
-
-  .second-con-p {
-    width: 90px;
-    height: 22px;
-    opacity: 1;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    gap: 2px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .second-con-p > p {
-    margin: 0;
-  }
-
-  .second-p-user-report {
-    width: 100px;
-    height: 17px;
-    opacity: 1;
-    font-family: Rubik;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0.95%;
-    text-align: right;
-    color: #36ADC1;
-  }
-
-  .third-con-p {
-    width: 65px;
-    height: 22px;
-    opacity: 1;
-    border-radius: 6px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-  }
-
-  .v-icon {
-    width: 14px;
-    height: 14px;
-    opacity: 1;
-    color: #36ADC1;
-    align-self: center;
-    justify-self: center;
-  }
-
-  .third-p-user-report {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    color: #36ADC1;
-    width: 53px;
-    height: 17px;
-    opacity: 1;
-    font-family: Rubik;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 14px;
-    line-height: 100%;
-    letter-spacing: 0.95%;
-    text-align: right;
-    background-color: #ebf7f9;
-  }
-
-  /* ===== Utilities ===== */
-  .phone-white-font {
-    color: #fff;
-  }
-
-  .blue-bg {
-    background: #32324C;
-  }
-
-  .underline {
-    text-decoration: underline;
   }
 }
+.phone-stat-card > p {
+  margin: 0;
+}
+
+/* ===== Collapsible filter panel under button ===== */
+.filter-bar-wrap {
+  position: static;
+  width: auto;
+  height: auto;
+  display: block;
+}
+
+#filterBar {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ease;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #fff;
+  margin-top: 8px;
+  width: 358px;
+}
+
+#filterBar.open {
+  max-height: 60vh;
+}
+
+#filterBar .filter-scroll {
+  display: flex;
+  flex-direction: column;
+  max-height: 60vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filter-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Filter boxes */
+#filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 12px;
+}
+
+.filter-box-tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  background: #fafafa;
+  cursor: pointer;
+  user-select: none;
+  width: 328px;
+}
+
+.filter-box-tag .box-square {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.filter-box-tag .box-square.on {
+  background: #32324C;
+  border-color: #06b6d4;
+}
+
+.filter-box-tag .box-square.on::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+}
+
+/* ===== Tags inline next to the title ===== */
+.title-line {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.appearing-tags {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  padding: 0;
+  margin: 0;
+}
+
+.appearing-tags .tag {
+  position: relative;
+  flex: 0 0 auto;
+  width: 95px;
+  height: 36px;
+  background: #DDDDDD;
+  border-radius: 8px;
+  padding-inline-start: 22px;
+}
+
+.appearing-tags .tag p {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #292929;
+  line-height: 1;
+  padding: 0 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appearing-tags .tag button {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* ===== Phone-only visibility for lists ===== */
+.user-report-wrap {
+  display: flex;
+  align-content: center;
+}
+
+.user-report-con {
+  display: flex;
+  align-content: center;
+  justify-items: center;
+}
+
+.user-report-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 358px;
+  height: 68px;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0 0 10px;
+}
+
+.full-user-report-box, .mini-bar, .main-desktop-grid {
+  display: none;
+}
+
+.user-report-row {
+  width: 358px;
+  height: 68px;
+  opacity: 1;
+  top: 244px;
+  left: -1px;
+  border-radius: 12px;
+  margin: 0;
+}
+
+.first-p-user-report-text {
+  margin: 0;
+}
+
+.first-block-user-report-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 150px;
+  height: 24px;
+  opacity: 1;
+  gap: 10px;
+}
+
+.first-con-p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  width: 94px;
+  height: 22px;
+  opacity: 1;
+  border-radius: 6px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  gap: 2px;
+}
+
+.first-p-user-report {
+  margin: 0;
+}
+
+.second-block-user-report-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 257px;
+  height: 22px;
+  opacity: 1;
+  gap: 4px;
+}
+
+.second-con-p {
+  width: 90px;
+  height: 22px;
+  opacity: 1;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  gap: 2px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-con-p > p {
+  margin: 0;
+}
+
+.second-p-user-report {
+  width: 100px;
+  height: 17px;
+  opacity: 1;
+  font-family: Rubik;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  text-align: right;
+  color: #36ADC1;
+}
+
+.third-con-p {
+  width: 65px;
+  height: 22px;
+  opacity: 1;
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+
+.v-icon {
+  width: 14px;
+  height: 14px;
+  opacity: 1;
+  color: #36ADC1;
+  align-self: center;
+  justify-self: center;
+}
+
+.third-p-user-report {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: #36ADC1;
+  width: 53px;
+  height: 17px;
+  opacity: 1;
+  font-family: Rubik;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.95%;
+  text-align: right;
+  background-color: #ebf7f9;
+}
+
+/* ===== Utilities ===== */
+.phone-white-font {
+  color: #fff;
+}
+
+.blue-bg {
+  background: #32324C;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
 /* PHONE ONLY: show the standalone search */
 @media (max-width: 430px) {
   .main-phone-grid > .search-box {
@@ -488,4 +482,93 @@
   /* same layout as desktop rows */
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 430px) {
+  .phone-grid-item {
+    direction: ltr;
+    /* normalize scroll physics */
+    flex-direction: row;
+    /* ensure left→right order */
+    justify-content: flex-start;
+    /* scrolling behavior */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    /* more forgiving than mandatory */
+    scroll-padding-inline-start: 16px;
+    padding-inline: 16px;
+    /* ensure first/last card aren’t clipped */
+  }
+
+  /* keep text/layout inside cards RTL */
+
+  /* cards must not shrink */
+}
+@media (max-width: 430px) and (max-width: 430px) {
+  /* Horizontal stats strip: LTR scroll, blue card first and visible */
+  .phone-grid-item {
+    direction: rtl;
+    /* left→right scrolling, first item sits on the left */
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+    width: 100%;
+    max-width: none;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    /* make it easy to reach edges; avoid "sticking" */
+    scroll-snap-type: x proximity;
+    scroll-padding-inline-start: 16px;
+    padding-inline: 16px;
+    /* so first/last cards aren't clipped */
+    background: #f7f7f7;
+  }
+
+  .phone-grid-item > * {
+    scroll-snap-align: start;
+  }
+
+  /* Cards: keep content RTL, but do NOT let them shrink */
+  .phone-stat-card {
+    direction: rtl;
+    /* Hebrew inside the card */
+    flex: 0 0 265px;
+    /* fixed track width so we actually overflow */
+    height: 180px;
+    border-radius: 12px;
+    background: #fff;
+    padding: 12px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+  }
+
+  /* If any rule tries to force the blue one back to white, override */
+  .phone-grid-item .phone-stat-card.blue-bg,
+.phone-grid-item .phone-stat-card.blue-stat-box {
+    background: #32324C !important;
+  }
+
+  /* Optional: hide scrollbars but keep scrollable */
+  .phone-grid-item::-webkit-scrollbar {
+    display: none;
+  }
+
+  .phone-grid-item {
+    scrollbar-width: none;
+  }
+}
+@media (max-width: 430px) {
+  .phone-grid-item .phone-stat-card {
+    direction: rtl;
+  }
+}
+@media (max-width: 430px) {
+  .phone-stat-card {
+    flex: 0 0 265px;
+  }
 }
