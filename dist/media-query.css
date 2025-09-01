@@ -466,6 +466,21 @@
     gap: 6px;
     width: 100%;
   }
+
+  .filter-bottom .apply-btn {
+    width: 343px;
+    /* fixed width */
+    height: 56px;
+    /* fixed height */
+    border-radius: 12px;
+    border: none;
+    background: #32324C;
+    /* keep your dark color */
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+  }
 }
 .is-hidden {
   display: none !important;
