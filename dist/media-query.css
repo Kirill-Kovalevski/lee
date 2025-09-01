@@ -59,6 +59,8 @@
 
   #filter-btn {
     display: inline-flex;
+    border: none;
+    background-color: #F7F7F7;
   }
 
   #filter-btn-desktop {
@@ -278,10 +280,22 @@
   }
 
   /* ===== Phone-only visibility for lists ===== */
+  .user-report-wrap {
+    display: flex;
+    align-content: center;
+  }
+
+  .user-report-con {
+    display: flex;
+    align-content: center;
+    justify-items: center;
+  }
+
   .user-report-row {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
+    align-content: center;
     width: 358px;
     height: 68px;
     border-radius: 12px;
@@ -300,6 +314,7 @@
     top: 244px;
     left: -1px;
     border-radius: 12px;
+    margin: 0;
   }
 
   .first-p-user-report-text {
@@ -320,12 +335,18 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 0;
+    width: 94px;
+    height: 22px;
+    opacity: 1;
+    border-radius: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    gap: 2px;
   }
 
   .first-p-user-report {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    margin: 0;
   }
 
   .second-block-user-report-row {
@@ -347,7 +368,7 @@
     gap: 2px;
     border-radius: 6px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
   }
 
@@ -356,6 +377,16 @@
   }
 
   .second-p-user-report {
+    width: 100px;
+    height: 17px;
+    opacity: 1;
+    font-family: Rubik;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.95%;
+    text-align: right;
     color: #36ADC1;
   }
 
@@ -367,6 +398,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 0;
   }
 
   .v-icon {
@@ -374,6 +406,26 @@
     height: 14px;
     opacity: 1;
     color: #36ADC1;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .third-p-user-report {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #36ADC1;
+    width: 53px;
+    height: 17px;
+    opacity: 1;
+    font-family: Rubik;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0.95%;
+    text-align: right;
+    background-color: #ebf7f9;
   }
 
   /* ===== Utilities ===== */

@@ -11,6 +11,14 @@
 .rubik-400-regular-12px{font-family:'Rubik';width:36px;height:17px;font-size:12px;font-weight:400;line-height:100%;color:#2a2a2a}
 .rubik-400-regular-16px{font-family:Rubik;font-weight:400;font-size:16px;line-height:100%;text-align:right;text-decoration:underline}
 .rubik-400-regular-10px{font-family:Rubik;font-weight:400;font-size:10px;line-height:10px;text-align:right}
+.rubik-500-medium-16px{font-family: Rubik;
+font-weight: 500;
+font-style: Medium;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+}
 
 
 /* ===== Page ===== */
@@ -88,9 +96,17 @@ top: 1004px;
 left: 16px;
 opacity: 1;
 border-radius: 12px;
-background-color: #ff0000;
+background:#32324C;color:#fff;
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
 }
-.filter-bottom .apply-btn{width:100%;height:56px;border-radius:12px;border:none;background:#32324C;color:#fff;display:grid;place-items:center;cursor:pointer}
+.filter-bottom .apply-btn{width: 91px;
+height: 19px;
+opacity: 1;
+top: 1022px;
+left: 142px;
+}
 .filter-bottom .apply-btn p{margin:0;font-size:16px;font-weight:600;font-family:Rubik,sans-serif}
 
 /* ===== Utility colors/decoration ===== */
@@ -112,7 +128,7 @@ opacity: 1;
 top: 16px;
 left: 16px;
 }
-.lelo-box{width:70px;height:29px;padding:4px 6px;gap:10px;border-radius:6px;background:#c615150d;display:flex;flex-direction:row-reverse; justify-content: center; align-items: center;}
+.lelo-box{width:70px;height:29px;padding:4px 6px;gap:10px;border-radius:6px;background-color: #2A2A2A0D;display:flex; justify-content: center; align-items: center;}
 .x-icon{width:18px;height:18px;color:#707070}
 /* DESKTOP: tags inline next to the title */
 @media (min-width:431px){כ
