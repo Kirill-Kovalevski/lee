@@ -75,6 +75,20 @@
     padding: 0 0 10px;
   }
 
+  .label {
+    display: flex;
+    justify-content: center;
+  }
+
+  .first-filter-bar-p {
+    margin: 0;
+  }
+
+  .second-filter-bar-p {
+    height: 6px;
+    margin: 0;
+  }
+
   /* ===== Phone search ===== */
   .main-phone-grid > .search-box {
     display: flex;
@@ -92,7 +106,7 @@
   }
 
   .search-input {
-    width: 128px;
+    width: 148px;
     height: 21px;
     border: none;
     text-align: right;
@@ -179,7 +193,9 @@
 }
 
 .filter-box-tag {
+  height: 48px;
   display: flex;
+  justify-content: flex-start;
   align-items: center;
   gap: 10px;
   padding: 10px 12px;
@@ -188,7 +204,8 @@
   background: #fafafa;
   cursor: pointer;
   user-select: none;
-  width: 328px;
+  width: 300px;
+  height: fit-content;
 }
 
 .filter-box-tag .box-square {
@@ -295,7 +312,7 @@
   height: 68px;
   border-radius: 12px;
   background: #fff;
-  padding: 0 0 10px;
+  gap: 10px;
 }
 
 .full-user-report-box, .mini-bar, .main-desktop-grid {
