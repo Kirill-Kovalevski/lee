@@ -14,16 +14,27 @@
   #filter-btn{display:inline-flex; border: none;background-color: #F7F7F7;}
   #filter-btn-desktop{display:none}
   .filter-wrap{display:flex;width:358px;justify-content:flex-end;padding:0 0 10px}
-  .label{display: flex; justify-content: center; }
   .first-filter-bar-p{
     margin: 0;
+
+  }
+  .first-filter-bar-p{
+    display: flex;
 
   }
   .second-filter-bar-p{
     height: 6px;
     margin: 0;
-  }
+    width: 72px;
+height: 10px;
+opacity: 1;
+top: 101px;
+left: 246px;
 
+  }
+#searchInput{
+  height: 56px;
+}
   /* ===== Phone search ===== */
   .main-phone-grid>.search-box{display:flex;align-items:center;width:358px;height:56px;border-radius:12px;background:#fff;margin:0}
   .search-icon{width:28px;height:28px}
@@ -62,10 +73,10 @@
   /* Filter boxes */
   #filters{display:grid;grid-template-columns:1fr;gap:10px;padding:12px}
   .filter-box-tag{height: 48px;
-    display:flex; justify-content: flex-start; align-items:center;gap:10px;padding:10px 12px;
-    border:1px solid #e5e7eb;border-radius:10px;background:#fafafa;cursor:pointer;user-select:none;width: 300px;height:fit-content;
+    display:flex; justify-content: flex-start; align-items:flex-start;gap:10px;padding:10px 12px;
+    border:1px solid #e5e7eb;border-radius:10px;background:#fafafa;cursor:pointer;user-select:none;width: 350px;height:fit-content;
   }
-  .filter-box-tag .box-square{position:relative;width:22px;height:22px;border:1px solid #cbd5e1;border-radius:6px;background:#fff}
+  .filter-box-tag .box-square{position:relative;width:36px;height: 36px;border-radius:1px solid #cbd5e1;border-radius:6px;background:#fff}
   .filter-box-tag .box-square.on{background:#32324C;border-color:#06b6d4}
   .filter-box-tag .box-square.on::after{
     content:'✓';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);

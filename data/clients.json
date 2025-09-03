@@ -2,43 +2,43 @@
   {
     "id": 1,
     "name": "דנה כהן",
-    "lastClass": { "name": "פילאטיס מכשירים", "startDate": "2025-07-23", "startHour": "12:30" },
-    "nextClassDate": "2025-10-23",
-    "subscription": "archived"
+    "lastClass": { "name": "שם השיעור האחרון", "startDate": "23/06", "startHour": "12:30" },
+    "nextClassDate": "23/10",
+    "subscription": "מנוי פעיל"
   },
   {
     "id": 2,
-    "name": "דור מזרחי ",
-    "lastClass": { "name": "יוגה ערב", "startDate": "2025-07-21", "startHour": "18:00" },
-    "nextClassDate": null,
-    "subscription": "active"
+    "name": "יוסי לוי",
+    "lastClass": { "name": "פילאטיס ערב", "startDate": "15/07", "startHour": "19:00" },
+    "nextClassDate": "02/11",
+    "subscription": "ללא מנוי"
   },
   {
     "id": 3,
-    "name": "ישראל ישראלי ",
-    "lastClass": { "name": "HIIT בוקר", "startDate": "2025-07-20", "startHour": "07:45" },
-    "nextClassDate": "2025-08-15",
-    "subscription": "active"
+    "name": "נועה ברק",
+    "lastClass": { "name": "יוגה בוקר", "startDate": "10/08", "startHour": "08:15" },
+    "nextClassDate": "12/11",
+    "subscription": "מנוי פעיל"
   },
   {
     "id": 4,
-    "name": "משה גולן",
-    "lastClass": { "name": "מתיחות", "startDate": "2025-07-19", "startHour": "09:15" },
-    "nextClassDate": "2025-09-01",
-    "subscription": "archived"
+    "name": "ישראל ישראלי",
+    "lastClass": { "name": "אימון כוח", "startDate": "05/09", "startHour": "18:45" },
+    "nextClassDate": "20/11",
+    "subscription": "מנוי בארכיון"
   },
   {
     "id": 5,
-    "name": "נועם לוי",
-    "lastClass": { "name": "פילאטיס מזרן", "startDate": "2025-07-22", "startHour": "10:00" },
-    "nextClassDate": null,
-    "subscription": "active"
+    "name": "משה גולן",
+    "lastClass": { "name": "שיעור ספינינג", "startDate": "28/08", "startHour": "07:30" },
+    "nextClassDate": "25/11",
+    "subscription": "מנוי פעיל"
   },
   {
     "id": 6,
-    "name": "דנה בר",
-    "lastClass": { "name": "קיקבוקס", "startDate": "2025-07-18", "startHour": "19:30" },
-    "nextClassDate": "2025-08-10",
-    "subscription": "archived"
+    "name": "דור מזרחי",
+    "lastClass": { "name": "ריצה מודרכת", "startDate": "01/09", "startHour": "20:00" },
+    "nextClassDate": "29/11",
+    "subscription": "ללא מנוי"
   }
 ]

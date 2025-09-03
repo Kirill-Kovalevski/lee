@@ -32,15 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const closest = (el, sel) => (el?.closest ? el.closest(sel) : null);
   const safeEscape = (str) => (window.CSS && CSS.escape ? CSS.escape(str) : String(str).replace(/"/g, '\\"'));
 
- function getDisplayLabel(name) {
-  // On phone: always show the fixed text
+function getDisplayLabel(name) {
+  // Phone: fixed generic label
   if (!mqDesktop.matches) return 'תגית פילטר';
 
-  // On desktop: keep showing the filter label (current behavior)
+  // Desktop: prefer data-chip; otherwise the first line; fallback to data-name
   const box = filters.querySelector(`.filter-box-tag[data-name="${CSS.escape(name)}"]`);
-  const lbl = box?.querySelector('.label');
-  return (lbl?.textContent || name).trim();
+  if (!box) return name;
+
+  const chip = box.getAttribute('data-chip');
+  if (chip) return chip.trim();
+
+  const firstLine = box.querySelector('.first-filter-bar-p')?.textContent;
+  return (firstLine || name).trim();
 }
+
 
 
   function renderTags() {

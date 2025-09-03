@@ -1,32 +1,61 @@
 // /lee/search.js
 document.addEventListener('DOMContentLoaded', () => {
-  // Grab BOTH inputs (desktop + phone share the same id)
+  // --- DOM refs ---
+  // Both search inputs share the same id in your HTML (desktop + phone)
   const inputs = Array.from(document.querySelectorAll('#searchInput'));
 
-  // Areas we toggle
-  const resultsArea = document.getElementById('resultsArea');                // dynamic results
-  const desktopStaticWrap = document.getElementById('static-rows');         // desktop static rows wrapper
-  const phoneStaticWraps = document.querySelectorAll('.user-report-wrap');  // phone list wrapper(s)
-  const lonePhoneCons    = document.querySelectorAll(
-    // if you have phone "cards" not inside .user-report-wrap
-    '.user-report-con:not(.user-report-wrap .user-report-con)'
-  );
+  const resultsArea        = document.getElementById('resultsArea');   // where dynamic results go
+  const desktopStaticWrap  = document.getElementById('static-rows');   // wrapper for the static desktop rows
+  const phoneListWraps     = document.querySelectorAll('.user-report-wrap'); // phone-only cards container(s)
+  const dataList           = document.getElementById('client-names');  // datalist for autocomplete
 
-  // Helper toggles
-  function hideStatic() {
+  // Helpers to show/hide
+  const hideStatic = () => {
     desktopStaticWrap?.classList.add('is-hidden');
-    phoneStaticWraps.forEach(el => el.classList.add('is-hidden'));
-    lonePhoneCons.forEach(el => el.classList.add('is-hidden'));
+    phoneListWraps.forEach(el => el.classList.add('is-hidden'));
     resultsArea?.classList.remove('is-hidden');
-  }
-  function showStatic() {
+  };
+  const showStatic = () => {
     desktopStaticWrap?.classList.remove('is-hidden');
-    phoneStaticWraps.forEach(el => el.classList.remove('is-hidden'));
-    lonePhoneCons.forEach(el => el.classList.remove('is-hidden'));
+    phoneListWraps.forEach(el => el.classList.remove('is-hidden'));
     resultsArea?.classList.add('is-hidden');
+  };
+
+  // --- Rendering ---
+  function renderRow(c) {
+    // Decide visual styles based on values so it matches your static rows
+    const hasNext = !!(c.nextClassDate && String(c.nextClassDate).trim());
+    const nextCellHTML = hasNext
+      ? `<p class="sky-blue-grid-box sky-font-color"><img src="/lee/icons/page_table_line_cell_future_tag-icon_type-yes.png" alt="V" /> ${c.nextClassDate}</p>`
+      : `<div class="lelo-box">
+           <p class="rubik-400-regular-14px">ללא</p>
+           <img class="x-icon" src="/lee/icons/page_table_line_cell_future_tag-icon_type-no.png" alt="X" />
+         </div>`;
+
+    const sub = (c.subscription || '').trim();
+    const isActive = sub === 'מנוי פעיל';
+    const subCellClass = isActive ? 'sky-blue-grid-box sky-font-color' : 'grey-grid-box grey-text';
+    const subCellHTML = `<p class="grid-item ${subCellClass}">${sub || ''}</p>`;
+
+    const lastName   = c.lastClass?.name  || '—';
+    const lastDate   = c.lastClass?.startDate || '';
+    const lastHour   = c.lastClass?.startHour || '';
+
+    // EXACT same structure/classes as your static rows
+    return `
+      <div class="full-user-report-box search-block-one" data-important="yes">
+        <p class="grid-item rubik-400-regular-18px underline">${c.name || ''}</p>
+        <p class="grid-item rubik-400-regular-18px">${lastName}</p>
+        <div class="double-p">
+          <p class="rubik-400-regular-18px">${lastDate}</p>
+          <p class="grid-item rubik-400-regular-14px grey-grid-box">${lastHour}</p>
+        </div>
+        ${nextCellHTML}
+        ${subCellHTML}
+      </div>
+    `;
   }
 
-  // Render results into #resultsArea
   function renderResults(list) {
     if (!resultsArea) return;
     resultsArea.innerHTML = '';
@@ -35,59 +64,43 @@ document.addEventListener('DOMContentLoaded', () => {
       resultsArea.textContent = 'אין תוצאות';
       return;
     }
-
-    list.forEach(c => {
-      const row = document.createElement('div');
-      row.className = 'search-result-box full-user-report-box'; // reuse your row look
-      row.innerHTML = `
-        <p class="grid-item rubik-400-regular-18px underline">${c.name}</p>
-        <p class="grid-item rubik-400-regular-18px">${c.lastClass?.name || '—'}</p>
-        <div class="double-p">
-          <p class="rubik-400-regular-18px">${c.lastClass?.date || ''}</p>
-          <p class="grid-item rubik-400-regular-14px grey-grid-box">${c.lastClass?.hour || ''}</p>
-        </div>
-        <p class="sky-blue-grid-box sky-font-color">${c.nextClassDate || 'ללא'}</p>
-        <p class="grid-item grey-grid-box">${c.subscription || ''}</p>
-      `;
-      resultsArea.appendChild(row);
-    });
+    // Build once for performance
+    const html = list.map(renderRow).join('');
+    resultsArea.insertAdjacentHTML('beforeend', html);
   }
 
-  // State
+  // --- Data loading ---
   let clients = [];
-
-  // Load mock data (absolute path so it always resolves)
-  fetch('/lee/data/clients.json')
-    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+  fetch('/lee/data/clients.json', { cache: 'no-store' })
+    .then(r => (r.ok ? r.json() : Promise.reject(r.status)))
     .then(data => {
-      clients = Array.isArray(data) ? data : data.clients || [];
-      // Fill datalist with names (both inputs point to the same <datalist id="client-names">)
-      const dl = document.getElementById('client-names');
-      if (dl) {
-        dl.innerHTML = '';
+      clients = Array.isArray(data) ? data : (data.clients || []);
+      // Fill datalist for autocomplete
+      if (dataList) {
+        dataList.innerHTML = '';
         clients.forEach(c => {
           const opt = document.createElement('option');
-          opt.value = c.name;
-          dl.appendChild(opt);
+          opt.value = c.name || '';
+          dataList.appendChild(opt);
         });
       }
     })
     .catch(err => console.error('Failed to load /lee/data/clients.json:', err));
 
-  // Search handler (shared by both inputs)
+  // --- Search handler (for both inputs) ---
   function onSearch(e) {
     const q = (e.target.value || '').trim().toLowerCase();
-
     if (!q) {
       showStatic();
       return;
     }
-
-    const matches = clients.filter(c => (c.name || '').toLowerCase().includes(q));
+    const matches = clients.filter(c =>
+      (c.name || '').toLowerCase().includes(q)
+    );
     hideStatic();
     renderResults(matches);
   }
 
-  // Attach to BOTH inputs (desktop + phone)
+  // Wire up inputs
   inputs.forEach(inp => inp?.addEventListener('input', onSearch));
 });

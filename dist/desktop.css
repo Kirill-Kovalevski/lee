@@ -142,6 +142,7 @@ body {
   margin: 0 auto;
   /* center column */
   padding-top: 100px;
+  padding-bottom: 100px;
   display: block;
   gap: 33px;
 }
@@ -207,7 +208,7 @@ body {
 
 .search-filter-desktop .search-input {
   flex: 1 1 auto;
-  height: 56px;
+  height: 57px;
   border: none;
   font-family: Rubik, sans-serif;
   font-weight: 400;
@@ -257,7 +258,7 @@ body {
 .phone-grid-item {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   align-content: center;
   width: 100%;
@@ -266,6 +267,7 @@ body {
   padding-bottom: 16px;
   gap: 27px;
   background: #f7f7f7;
+  margin: 0;
 }
 
 .phone-stat-card {
@@ -289,7 +291,7 @@ body {
 /* ===== Mini bar & report rows (desktop) ===== */
 .mini-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   max-width: 1141px;
   border-radius: 12px;
@@ -434,6 +436,7 @@ body {
 .filter-box-tag {
   display: flex;
   align-items: center;
+  justify-content: first baseline;
   gap: 10px;
   padding: 10px 12px;
   border: 1px solid #e5e7eb;
@@ -466,6 +469,14 @@ body {
   font-weight: 700;
   font-size: 14px;
   color: #fff;
+}
+
+.first-filter-bar-p {
+  margin: 0;
+}
+
+.second-filter-bar-p {
+  margin: 0;
 }
 
 /* ===== Tag chips next to title ===== */
@@ -522,10 +533,12 @@ body {
 
 /* ===== Drawer bottom button (343 × 56) ===== */
 .filter-bottom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
+  width: 343px;
+  height: 56px;
+  opacity: 1;
+  top: 1004px;
+  left: 16px;
+  border-radius: 12px;
 }
 
 .filter-bottom .apply-btn {
@@ -578,6 +591,7 @@ body {
 }
 
 .grey-grid-box {
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -681,11 +695,14 @@ body {
     top: 0;
     inset-inline-end: 0;
     width: 375px;
-    height: 100dvh;
+    height: 1041px;
     display: none !important;
     /* hidden by default */
     z-index: 99999;
     /* make sure it's above everything */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .filter-bar-wrap.open {
@@ -721,5 +738,33 @@ body {
 
   .filter-wrap {
     display: none !important;
+  }
+}
+/* Default: hide the standalone phone search */
+.main-phone-grid > .search-box {
+  display: none;
+}
+
+/* PHONE ONLY: show standalone search under the header */
+@media (max-width: 430px) {
+  .main-phone-grid > .search-box {
+    display: flex !important;
+  }
+}
+/* DESKTOP ONLY: ensure it's hidden */
+@media (min-width: 431px) {
+  .main-phone-grid > .search-box {
+    display: none !important;
+  }
+}
+/* Pair rules for the desktop row (the bar with search + filter) */
+@media (max-width: 430px) {
+  .search-filter-desktop {
+    display: none !important;
+  }
+}
+@media (min-width: 431px) {
+  .search-filter-desktop {
+    display: flex !important;
   }
 }
