@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ---- Chip removal ---------------------------
 
-  // Event delegation: clicking the X button on a chip unselects it.
+  // clicking the X button on a chip unselects it.
   tagsEl.addEventListener("click", (e) => {
     const btn = closest(e.target, "button");
     if (!btn) return;
