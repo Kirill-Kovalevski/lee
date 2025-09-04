@@ -1,12 +1,10 @@
 @charset "UTF-8";
-/* =========================
-   Desktop CSS (paste all)
-   ========================= */
-/* ===== Typography ===== */
+/* ----- Colors ----- */
+/* ===== Text ===== */
 .rubik-700-bold-18px {
   font-family: "rubik bold", sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 100%;
   letter-spacing: 0.95%;
   color: #292929;
@@ -15,23 +13,23 @@
 .rubik-700-bold-24px {
   font-family: Rubik;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
   text-align: right;
 }
 
 .rubik-600-semiBold-18px {
   font-family: Rubik;
   font-weight: 600;
-  font-size: 18px;
-  line-height: 18px;
+  font-size: 1.125rem;
+  line-height: 1.125rem;
   text-align: right;
 }
 
 .rubik-500-medium-36px {
   font-family: "Rubik Medium", sans-serif;
   font-weight: 500;
-  font-size: 36px;
+  font-size: 2.25rem;
   line-height: 100%;
   letter-spacing: 0.95%;
   color: #292929;
@@ -40,7 +38,7 @@
 .rubik-400-regular-18px {
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 100%;
   letter-spacing: 0.95%;
   color: #292929;
@@ -49,7 +47,7 @@
 .rubik-400-regular-18px-b {
   font-family: "Rubik";
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 100%;
   letter-spacing: 0.95%;
   text-align: right;
@@ -59,7 +57,7 @@
   font-family: "Rubik";
   width: auto;
   height: auto;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.95%;
@@ -70,7 +68,7 @@
   font-family: "Rubik";
   width: auto;
   height: auto;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0.95%;
@@ -81,7 +79,7 @@
   font-family: "Rubik";
   width: auto;
   height: auto;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 100%;
   color: #2a2a2a;
@@ -91,7 +89,7 @@
   font-family: "Rubik";
   width: auto;
   height: auto;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 400;
   line-height: 100%;
   color: #2a2a2a;
@@ -100,7 +98,7 @@
 .rubik-400-regular-16px {
   font-family: Rubik;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 100%;
   text-align: right;
   text-decoration: underline;
@@ -109,26 +107,27 @@
 .rubik-400-regular-10px {
   font-family: Rubik;
   font-weight: 400;
-  font-size: 10px;
-  line-height: 10px;
+  font-size: 0.625rem;
+  line-height: 0.625rem;
   text-align: right;
 }
 
 .rubik-500-medium-16px {
   font-family: Rubik;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 100%;
   letter-spacing: 0;
   text-align: center;
 }
 
-/* ===== Page / layout (desktop-first) ===== */
+/* ===== layout ===== */
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -136,22 +135,20 @@ html, body {
 }
 
 body {
-  width: 1141px;
-  /* your design width */
+  width: 71.3125rem;
   min-height: 100dvh;
   margin: 0 auto;
-  /* center column */
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
   display: block;
-  gap: 33px;
+  gap: 2.0625rem;
 }
 
 /* ===== Header ===== */
 .phone-header {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .phone-main-title-text {
@@ -159,10 +156,10 @@ body {
 }
 
 .phone-return-btn {
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  padding: 12px;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
   border: 0;
   background: #fff;
   cursor: pointer;
@@ -174,55 +171,65 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 72px;
-  border-radius: 12px;
-  background: #f7f7f7;
+  height: 4.5rem;
+  border-radius: 0.75rem;
+  background: #F7F7F7;
   margin: 0;
   padding: 0;
+}
+.search-filter-desktop .search-icon-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+.search-filter-desktop .search-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.search-filter-desktop .search-input {
+  flex: 1 1 auto;
+  height: 3.5625rem;
+  border: none;
+  font-family: Rubik, sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  text-align: right;
+  text-transform: capitalize;
+  padding: 0 0.75rem;
+}
+.search-filter-desktop .filter-button {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 0.75rem;
+  background: #fff;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
 }
 
 .search-box {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: 280px;
-  height: 56px;
-  border-radius: 12px;
-  padding: 12px;
-  gap: 8px;
+  width: 17.5rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  gap: 0.5rem;
   background: #fff;
 }
 
-.search-filter-desktop .search-icon-con {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 72px;
-  height: 72px;
-}
-
-.search-filter-desktop .search-icon {
-  width: 28px;
-  height: 28px;
-}
-
-.search-filter-desktop .search-input {
-  flex: 1 1 auto;
-  height: 57px;
-  border: none;
-  font-family: Rubik, sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  text-align: right;
-  text-transform: capitalize;
-  padding: 0 12px;
-}
-
 .filter-btn-con {
-  width: 100px;
-  height: 56px;
-  padding: 15px 16px;
-  border-radius: 12px;
+  width: 6.25rem;
+  height: 3.5rem;
+  padding: 0.9375rem 1rem;
+  border-radius: 0.75rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -235,23 +242,9 @@ body {
 }
 
 .filter-icon-desktop {
-  width: 28px;
-  height: 26.25px;
+  width: 1.75rem;
+  height: 1.640625rem;
   margin: 0;
-}
-
-.search-filter-desktop .filter-button {
-  width: 72px;
-  height: 72px;
-  border-radius: 12px;
-  background: #fff;
-  border: none;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
 }
 
 /* ===== Stats row ===== */
@@ -262,27 +255,26 @@ body {
   align-items: center;
   align-content: center;
   width: 100%;
-  height: 196px;
-  max-width: 1141px;
-  padding-bottom: 16px;
-  gap: 27px;
-  background: #f7f7f7;
+  height: 12.25rem;
+  max-width: 71.3125rem;
+  padding-bottom: 1rem;
+  gap: 1.6875rem;
+  background: #F7F7F7;
   margin: 0;
 }
 
 .phone-stat-card {
-  max-width: 265px;
-  width: 265px;
-  height: 180px;
-  padding: 12px 16px;
-  border-radius: 12px;
+  max-width: 16.5625rem;
+  width: 16.5625rem;
+  height: 11.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   background: #fff;
 }
-
 .phone-stat-card > p {
   margin: 0;
   padding: 0;
@@ -293,10 +285,10 @@ body {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  max-width: 1141px;
-  border-radius: 12px;
-  padding: 16px 0 16px 10px;
-  gap: 18px;
+  max-width: 71.3125rem;
+  border-radius: 0.75rem;
+  padding: 1rem 0 1rem 0.625rem;
+  gap: 1.125rem;
   width: 100%;
 }
 
@@ -307,34 +299,34 @@ body {
 }
 
 .mini-bar-item-one {
-  width: 277px;
-  height: 29px;
-  padding-right: 10px;
-  gap: 10px;
+  width: 17.3125rem;
+  height: 1.8125rem;
+  padding-right: 0.625rem;
+  gap: 0.625rem;
   display: flex;
   justify-content: center;
 }
 
 .mini-bar-item-two {
-  width: 377px;
-  height: 29px;
-  padding-right: 10px;
+  width: 23.5625rem;
+  height: 1.8125rem;
+  padding-right: 0.625rem;
   display: flex;
   align-content: center;
 }
 
 .mini-bar-item-three {
-  width: 140px;
-  height: 29px;
-  padding-right: 10px;
-  gap: 10px;
+  width: 8.75rem;
+  height: 1.8125rem;
+  padding-right: 0.625rem;
+  gap: 0.625rem;
 }
 
 .mini-bar-item-four {
-  width: 165px;
-  height: 29px;
-  padding-right: 10px;
-  gap: 10px;
+  width: 10.3125rem;
+  height: 1.8125rem;
+  padding-right: 0.625rem;
+  gap: 0.625rem;
   display: flex;
   justify-self: flex-start;
   align-self: flex-start;
@@ -342,11 +334,11 @@ body {
 
 .full-user-report-box {
   width: 100%;
-  height: 61px;
-  max-width: 1141px;
-  padding: 16px 0 16px 10px;
-  gap: 18px;
-  border-radius: 12px;
+  height: 3.8125rem;
+  max-width: 71.3125rem;
+  padding: 1rem 0 1rem 0.625rem;
+  gap: 1.125rem;
+  border-radius: 0.75rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -356,21 +348,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 
 /* ===== Title + tags row ===== */
 .title-line {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 12px;
+  gap: 0.625rem;
+  margin-top: 0.75rem;
 }
-
 .title-line .appearing-tags {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
@@ -379,18 +370,18 @@ body {
 /* ==============================
    Filter drawer — DESKTOP ONLY
    ============================== */
-/* Hidden by default (base) */
+/* Hidden by default */
 .filter-bar-wrap {
   display: none;
 }
 
-/* Desktop: fixed right drawer, visible when .open is toggled by JS */
-@media (min-width: 431px) {
+/* Desktop: fixed right drawer, visible when click is toggled by JS */
+@media (min-width: 26.9375rem) {
   .filter-bar-wrap {
     position: fixed;
     top: 0;
     inset-inline-end: 0;
-    width: 375px;
+    width: 23.4375rem;
     height: 100dvh;
     display: none;
     z-index: 1000;
@@ -402,12 +393,11 @@ body {
 
   #filterBar {
     height: 100%;
-    border: 1px solid #e5e7eb;
+    border: 0.0625rem solid #e5e7eb;
     background: #fff;
     border-radius: 0;
     overflow: hidden;
   }
-
   #filterBar .filter-scroll {
     height: 100%;
     overflow-y: auto;
@@ -437,29 +427,26 @@ body {
   display: flex;
   align-items: center;
   justify-content: first baseline;
-  gap: 10px;
-  padding: 10px 12px;
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
+  gap: 0.625rem;
+  padding: 0.625rem 0.75rem;
+  border: 0.0625rem solid #e5e7eb;
+  border-radius: 0.625rem;
   background: #fafafa;
   cursor: pointer;
   user-select: none;
 }
-
 .filter-box-tag .box-square {
   position: relative;
-  width: 22px;
-  height: 22px;
-  border: 1px solid #cbd5e1;
-  border-radius: 6px;
+  width: 1.375rem;
+  height: 1.375rem;
+  border: 0.0625rem solid #cbd5e1;
+  border-radius: 0.375rem;
   background: #fff;
 }
-
 .filter-box-tag .box-square.on {
   background: #32324C;
   border-color: #06b6d4;
 }
-
 .filter-box-tag .box-square.on::after {
   content: "✓";
   position: absolute;
@@ -467,7 +454,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #fff;
 }
 
@@ -483,22 +470,20 @@ body {
 .appearing-tags {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 0.375rem;
   overflow-x: auto;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
 }
-
 .appearing-tags .tag {
   position: relative;
   flex: 0 0 auto;
-  width: 95px;
-  height: 36px;
+  width: 5.9375rem;
+  height: 2.25rem;
   background: #DDDDDD;
-  border-radius: 8px;
-  padding-inline-start: 22px;
+  border-radius: 0.5rem;
+  padding-inline-start: 1.375rem;
 }
-
 .appearing-tags .tag p {
   position: absolute;
   inset: 0;
@@ -506,45 +491,43 @@ body {
   place-items: center;
   margin: 0;
   font-family: Rubik, sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #292929;
   line-height: 1;
-  padding: 0 8px;
+  padding: 0 0.5rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .appearing-tags .tag button {
   position: absolute;
   top: 50%;
-  left: 6px;
+  left: 0.375rem;
   transform: translateY(-50%);
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   border: 0;
   background: transparent;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 1;
   color: #333;
 }
 
-/* ===== Drawer bottom button (343 × 56) ===== */
+/* ===== Drawer bottom button ===== */
 .filter-bottom {
-  width: 343px;
-  height: 56px;
+  width: 21.4375rem;
+  height: 3.5rem;
   opacity: 1;
-  top: 1004px;
-  left: 16px;
-  border-radius: 12px;
+  top: 62.75rem;
+  left: 1rem;
+  border-radius: 0.75rem;
 }
-
 .filter-bottom .apply-btn {
-  width: 343px;
-  height: 56px;
-  border-radius: 12px;
+  width: 21.4375rem;
+  height: 3.5rem;
+  border-radius: 0.75rem;
   border: none;
   background: #32324C;
   color: #fff;
@@ -552,15 +535,14 @@ body {
   place-items: center;
   cursor: pointer;
 }
-
 .filter-bottom .apply-btn p {
   margin: 0;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
   font-family: Rubik, sans-serif;
 }
 
-/* ===== Utility colors/decoration ===== */
+/* ===== decoration ===== */
 .white-font {
   color: #fff;
 }
@@ -573,11 +555,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
-  height: 29px;
-  border-radius: 6px;
-  padding: 4px 6px;
-  gap: 10px;
+  width: 5.625rem;
+  height: 1.8125rem;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.375rem;
+  gap: 0.625rem;
   background: rgba(54, 173, 193, 0.1);
 }
 
@@ -585,7 +567,7 @@ body {
   color: #36ADC1;
   font-family: "Rubik", sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.125rem;
   line-height: 100%;
   letter-spacing: 0.95%;
 }
@@ -595,11 +577,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 29px;
-  border-radius: 6px;
-  padding: 4px 6px;
-  gap: 10px;
+  width: 4.375rem;
+  height: 1.8125rem;
+  border-radius: 0.375rem;
+  padding: 0.25rem 0.375rem;
+  gap: 0.625rem;
   background: rgba(42, 42, 42, 0.05);
 }
 
@@ -616,13 +598,13 @@ body {
   background-color: #F7F7F7;
 }
 
-/* ===== Filter header bits ===== */
+/* ===== Filter header ===== */
 .filter-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px 12px;
-  border-bottom: 1px solid #f1f5f9;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 0.0625rem solid #f1f5f9;
 }
 
 .head-left {
@@ -631,17 +613,17 @@ body {
 }
 
 .phone-close-filter-con {
-  width: 40px;
-  height: 40px;
-  border-radius: 20px;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 1.25rem;
 }
 
 .lelo-box {
-  width: 70px;
-  height: 29px;
-  padding: 4px 6px;
-  gap: 10px;
-  border-radius: 6px;
+  width: 4.375rem;
+  height: 1.8125rem;
+  padding: 0.25rem 0.375rem;
+  gap: 0.625rem;
+  border-radius: 0.375rem;
   background-color: #2A2A2A0D;
   display: flex;
   justify-content: center;
@@ -649,57 +631,54 @@ body {
 }
 
 .x-icon {
-  width: 18px;
-  height: 18px;
+  width: 1.125rem;
+  height: 1.125rem;
   color: #707070;
 }
 
 /* DESKTOP: tags inline next to the title */
-@media (min-width: 431px) {
+@media (min-width: 26.9375rem) {
   .title-line {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
   }
 
   .title-line .appearing-tags {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
+    gap: 0.375rem;
   }
 }
-/* Helpers */
 .is-hidden {
   display: none !important;
 }
 
 /* Desktop: ensure desktop rows are visible */
-@media (min-width: 431px) {
+@media (min-width: 26.9375rem) {
   .full-user-report-box {
     display: flex !important;
   }
 }
-/* Desktop: HIDE all phone layout blocks (guaranteed) */
-@media (min-width: 431px) {
+/* Desktop: HIDE all phone layout blocks */
+@media (min-width: 26.9375rem) {
   .user-report-wrap,
 .user-report-con,
 .user-report-row {
     display: none !important;
   }
 }
-/* === Drawer visibility hammer (desktop) === */
-@media (min-width: 431px) {
+/* === Drawer visibility (desktop) === */
+@media (min-width: 26.9375rem) {
   .filter-bar-wrap {
     position: fixed;
     top: 0;
     inset-inline-end: 0;
-    width: 375px;
-    height: 1041px;
+    width: 23.4375rem;
+    height: 65.0625rem;
     display: none !important;
-    /* hidden by default */
     z-index: 99999;
-    /* make sure it's above everything */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -707,14 +686,12 @@ body {
 
   .filter-bar-wrap.open {
     display: block !important;
-    /* shown when JS toggles .open */
   }
 
-  /* inner panel basics (safe defaults) */
   #filterBar {
     height: 100%;
     background: #fff;
-    border: 1px solid #e5e7eb;
+    border: 0.0625rem solid #e5e7eb;
     overflow: hidden;
     border-radius: 0;
   }
@@ -727,7 +704,6 @@ body {
     -webkit-overflow-scrolling: touch;
   }
 
-  /* show desktop opener, hide phone opener */
   #filter-btn-desktop {
     display: inline-flex !important;
   }
@@ -740,30 +716,30 @@ body {
     display: none !important;
   }
 }
-/* Default: hide the standalone phone search */
+/* hide the standalone phone search */
 .main-phone-grid > .search-box {
   display: none;
 }
 
 /* PHONE ONLY: show standalone search under the header */
-@media (max-width: 430px) {
+@media (max-width: 26.875rem) {
   .main-phone-grid > .search-box {
     display: flex !important;
   }
 }
 /* DESKTOP ONLY: ensure it's hidden */
-@media (min-width: 431px) {
+@media (min-width: 26.9375rem) {
   .main-phone-grid > .search-box {
     display: none !important;
   }
 }
 /* Pair rules for the desktop row (the bar with search + filter) */
-@media (max-width: 430px) {
+@media (max-width: 26.875rem) {
   .search-filter-desktop {
     display: none !important;
   }
 }
-@media (min-width: 431px) {
+@media (min-width: 26.9375rem) {
   .search-filter-desktop {
     display: flex !important;
   }

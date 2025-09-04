@@ -21,7 +21,7 @@
       <p class="phone-main-title-text rubik-400-regular-32px">העדרויות</p>
     </div>
 
-    <!-- DESKTOP: search + filter in one row under the header -->
+    <!-- DESKTOP: search + filtr -->
     <div class="search-filter-desktop">
       <div class="search-box">
         <div class="search-icon-con">
@@ -33,7 +33,7 @@
       </div>
       <hr>
 
-      <!-- DESKTOP opener ONLY (CSS shows on ≥431px) -->
+      <!-- DESKTOP filter -->
       <button id="filter-btn-desktop" class="filter-button" type="button" aria-controls="filterBar" aria-expanded="false">
         <img class="filter-icon-desktop" src="/lee/icons/sliders-light (1).png" alt="filter-button" />
         <p class="filter-text-desktop rubik-400-regular-18px">סינון</p>
@@ -64,7 +64,7 @@
       </div>
     </div>
 
-    <!-- PHONE opener ONLY (CSS shows on ≤430px) -->
+    <!-- PHONE filter -->
     <div class="filter-wrap">
       <div class="filter-con">
         <button id="filter-btn" class="btn-filter" type="button" aria-controls="filterBar" aria-expanded="false">
@@ -73,7 +73,7 @@
       </div>
     </div>
 
-    <!-- Filter panel (shared markup; CSS changes behavior per viewport) -->
+    <!-- Filter panel -->
     <div class="filter-bar-wrap">
       <div class="filter-bar" id="filterBar" role="region" aria-label="סינון תוצאות">
         <div class="filter-scroll">
@@ -87,7 +87,7 @@
             </div>
           </div>
 
-          <!-- Boxes -->
+          <!-- tags and boxes -->
           <div class="filters" id="filters">
             <div class="filter-box-tag" data-name="תגית לדוגמה 1" data-chip="תגית פילטר">
               <div class="box-square"></div>
@@ -139,7 +139,7 @@
             </div>
           </div>
 
-          <!-- Bottom full-width button -->
+          <!-- Bottom button -->
           <div class="filter-bottom">
             <button type="button" class="apply-btn white-font"><p class="rubik-500-medium-16px">הצגת תוצאות</p></button>
           </div>
@@ -147,7 +147,7 @@
       </div>
     </div>
 
-    <!-- (Optional) extra search box for phone if you really need it elsewhere; otherwise you can remove this -->
+<!-- Phone search box-->
     <div class="search-box">
       <div class="search-icon-con">
         <img class="search-icon" src="/lee/icons/search-light.png" alt="search-icon" />
@@ -157,13 +157,13 @@
       </form>
     </div>
 
-    <!-- Title + tags -->
+    <!-- Title -->
     <div class="title-line">
       <div class="mid-title rubik-400-regular-32px">כותרת</div>
       <div class="appearing-tags" aria-live="polite"></div>
     </div>
 
-    <!-- Desktop mini-bar + rows -->
+    <!-- Desktop mini-bar -->
     <div id="table-headers" class="mini-bar">
       <p class="minibar-paragraph rubik-400-regular-20px mini-bar-item mini-bar-item-one">שם הלקוח
         <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up" /></p>
@@ -175,7 +175,7 @@
         <img src="/lee/icons/page_table_header_filter_name-icon.png" alt="arrow-up" /></p>
     </div>
 
-    <!-- Example rows -->
+    <!-- Static rows -->
      <div id="static-rows">
     <div class="full-user-report-box search-block-one" data-important="yes">
       <p class="grid-item rubik-400-regular-18px underline">ישראל ישראלי 1</p>
@@ -230,7 +230,7 @@
     <!-- DYNAMIC results go here (hidden until user types) -->
 <div id="resultsArea" class="rubik-400-regular-18px is-hidden"></div>
 
-    <!-- Phone list (shown only on phone via CSS) -->
+    <!-- Phone list -->
      <div class="user-report-wrap">
     <div class="user-report-con">
       <div class="user-report-row">
@@ -290,15 +290,11 @@
             <p class="rubik-400-regular-14px third-p-user-report">מנוי פעיל</p>
           </div>
         </div>
-        
       </div>
     </div>
      </div>
-    
 </div>
-  
   <datalist id="client-names"></datalist>
-
   <script src="/lee/filter.js" defer></script>
   <script src="/lee/search.js" defer></script>
 </body>
