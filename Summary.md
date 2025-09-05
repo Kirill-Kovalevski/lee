@@ -1,5 +1,5 @@
 # README – Client Report Front-End Project
-
+https://www.notion.so/Front-End-Assignment-224fac5c3c53804f8992c95a2d793238
 ## 📌 Project Overview
 This project is a **front-end assignment** built with **HTML, SCSS, and JavaScript**, designed to simulate a client-report dashboard.  
 It demonstrates **responsive layouts**, a **filter bar with dynamic tags**, and a **live search system** powered by mock JSON data.
